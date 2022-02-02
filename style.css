@@ -13935,3 +13935,10 @@ body:not(.no-transition) #wrapper,
 }
 
 
+/* ----------------------------------------------------------------
+	Custom
+-----------------------------------------------------------------*/
+
+#section-about .hero-headline span{
+ font-family: 'Lato', sans-serif;
+}
