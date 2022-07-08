@@ -1,1 +1,1 @@
-# Graphic Designer
+# Communication Designer
