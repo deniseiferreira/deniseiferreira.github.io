@@ -1,0 +1,245 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #202020;
+    font-size: 20px;
+    background-color: #F6F6F6;
+}
+h1, .brand-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+.brand-name {
+    font-size: 40px;
+    font-weight: bold;
+}
+.nav-link {
+    font-size: 24px;
+}
+.nav-ttop{
+    padding-top: 5px;
+}
+.nav-stop{
+    padding-top: 2px;
+}
+.hero-section{
+    margin-top: 120px;
+    margin-bottom: 180px;
+}
+.hero-title {
+    font-size: 96px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.hero-subtitle {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.work-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+.gray-tags{
+    color: #9C9FA1;
+    font-size:16px;
+}
+section > div.hover-white:hover {
+    background-color: #FFF !important;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+div.hover-white{
+    margin-left: 6px !important;
+}
+
+section > div.hover-white > div:first-child{
+    padding-left: 0px !important;
+}
+
+footer {
+    height: 80px;
+    background-color: #202020;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    padding: 25px;
+    margin-top: 100px;
+}
+footer p{
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
+footer svg{
+    margin-top: -5px;
+}
+
+section.about div.container{
+            max-width: 796px;
+            padding-top: 40px;
+            padding-bottom: 100px;
+        }
+
+section.about div.container p{
+            font-size: 18px;
+        }
+
+
+/* Case Studies */
+
+        .crably-hero{
+            background-image: url("images/crably/hero_bg.png");
+            background-size: cover;
+            color: #F6F6f6;
+        }
+
+        .tasukete-hero{
+            background-image: url("images/tasukete/hero_bg.png");
+            color: #F6F6f6;
+        }
+
+        .fw600{
+            font-weight: 600 !important;
+        }
+
+        .darker_box{
+            background-color: rgba(0,0,0,0.15);
+            padding: 20px 40px;
+        }
+
+        .case-hero-section div.container{
+            max-width: 796px;
+            padding-top: 88px;
+            padding-bottom: 64px;
+        }
+
+        .case-title {
+            font-size: 62px;
+            font-weight: 600;
+            margin-bottom: 48px;
+            text-align: left;
+        }
+
+        .crably-hero .case-title{
+            margin-bottom: 24px;
+        }
+
+        .case-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 48px; 
+            text-align: left;
+        }
+
+        .case-team, .case-role{
+            font-weight: 300;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .case-team m, .case-role m{
+            font-weight: 500;
+        }
+
+        .section-white{
+            background-color: #FFFFFF;
+        }
+
+        .section-surviving, .section-gray, .section-white{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .section-surviving h2, .section-gray h2, .section-white h2{
+            padding-bottom: 48px;
+        }
+
+        .section-surviving h4{
+            font-size: 20px;
+            padding-bottom: 24px;
+        }
+
+        .section-surviving li, .section-gray li{
+            padding-bottom: 24px;
+        }
+
+        .section-surviving li:last-child, .section-gray li:last-child{
+            padding-bottom: 0px;
+        }
+
+        .fs16{
+            font-size: 16px;
+        }
+
+        .fs16 m{
+            font-weight: 600;
+        }
+
+        .section-inclusive{
+            background-image: url("images/tasukete/japan_life_bg.png");
+            background-size: cover;
+            height: 695px;
+            padding: 40px;
+        }
+
+        .section-inclusive div.text-box{
+            width: 37%;
+            background-color: #FFFFFF;
+            padding: 40px;
+
+        }
+
+        .section-inclusive div.text-box h4{
+            font-size: 30px;
+            padding-bottom: 32px;
+        }
+
+        .section-gray{
+            background-color: #f6f6f6;
+        }
+
+        .figure-text{
+            color: #9C9FA1;
+            font-size: 16px;
+        }
+
+        .work-title {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .gray-tags{
+            color: #9C9FA1;
+            font-size:16px;
+        }
+
+        .white-bg{
+            background-color: white !important;
+        }
+
+        .image-mt{
+            margin-top: 75px;
+        }
+
+
+        .image-mb{
+            margin-bottom: 75px;
+        }
+
+        section > div.hover-white:hover {
+            background-color: #FFF !important;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        div.hover-white{
+            margin-left: 6px !important;
+        }
+
+        section > div.hover-white > div:first-child{
+            padding-left: 0px !important;
+        }
+
+
+
