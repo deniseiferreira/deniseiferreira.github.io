@@ -53,6 +53,7 @@ section > div.hover-white:hover {
 
 div.hover-white{
     margin-left: 6px !important;
+    position: relative;
 }
 
 section > div.hover-white > div:first-child{
