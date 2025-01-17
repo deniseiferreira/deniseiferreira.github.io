@@ -14,6 +14,16 @@ h1, .brand-name {
     font-size: 40px;
     font-weight: bold;
 }
+.brand-name,
+.brand-name:hover,
+.brand-name:link,
+.brand-name:active,
+.brand-name:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #202020;
+}
+
 .nav-link {
     font-size: 24px;
 }
