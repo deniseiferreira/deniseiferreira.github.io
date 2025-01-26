@@ -50,6 +50,7 @@ h1, .brand-name {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 32px;
     font-weight: bold;
+    margin-top: 48px;
 }
 .gray-tags{
     color: #9C9FA1;
@@ -64,6 +65,7 @@ section > div.hover-white:hover {
 div.hover-white{
     margin-left: 6px !important;
     position: relative;
+    margin-bottom: 64px;
 }
 
 section > div.hover-white > div:first-child{
@@ -267,5 +269,107 @@ section.about div.container p{
             padding-left: 0px !important;
         }
 
+
+
+
+
+/* Hamburger icon styling */
+.burger .icon {
+    display: none;
+}
+
+
+/* Hide the dropdown menu by default */
+#myLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as necessary */
+    right: 0;
+    background-color: #F6F6F6;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Show the links when the menu is toggled */
+#myLinks a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #212529;
+    display: block;
+}
+/* Show links when the menu is active */
+#myLinks.active {
+    display: flex;
+}
+
+
+#myLinks.active {
+    display: none;
+}
+
+
+
+/* MEDIA Mobile */
+@media (max-width: 770px) {
+
+    .hero-title{
+        font-size: 72px;
+    }
+
+    .hero-section {
+        margin-top: 80px;
+        margin-bottom: 120px;
+    }
+
+    .work-title {
+margin-top: 48px;
+}
+
+    /* Hide the dropdown menu by default */
+#myLinks {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as necessary */
+    right: 0;
+    background-color: #F6F6F6;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Show the links when the menu is toggled */
+#myLinks a {
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    color: #212529;
+    display: block;
+}
+/* Show links when the menu is active */
+#myLinks.active {
+    display: flex;
+    height: 100%;
+    padding-top: 50px;
+}
+
+    /* Hamburger icon styling */
+.burger .icon {
+    display: block;
+    cursor: pointer;
+    color:#212529;
+}
+
+  .flex-grow-1 {
+    display: none !important;
+  }
+
+ 
+}
 
 
