@@ -369,6 +369,9 @@ margin-top: 48px;
     display: none !important;
   }
 
+.section-gray.about {
+padding-top: 20px;
+}
 
 footer p {
 font-size: 14px;
