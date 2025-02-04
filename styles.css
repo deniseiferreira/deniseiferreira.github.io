@@ -317,6 +317,7 @@ section.about div.container p{
 
     section > div.hover-white {
     background-color: #FFF !important;
+    border-radius: 8px;
     }
 
     .hero-title{
