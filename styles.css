@@ -315,6 +315,10 @@ section.about div.container p{
 /* MEDIA Mobile */
 @media (max-width: 770px) {
 
+    section > div.hover-white {
+    background-color: #FFF !important;
+    }
+
     .hero-title{
         font-size: 72px;
     }
