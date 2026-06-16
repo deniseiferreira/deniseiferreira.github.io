@@ -1,268 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denise Ventura Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
-
-    <link rel="stylesheet" type="text/css" href="https://deniseventura.design/styles.css"  />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasukete — Denise Ventura</title>
+  <meta name="description" content="Case study: designing Tasukete, a community platform combining a service directory, geolocation, and social feed for foreigners in Japan.">
+  <link rel="canonical" href="https://deniseventura.design/tasukete.html">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tasukete — Denise Ventura">
+  <meta property="og:description" content="Case study: designing Tasukete, a community platform combining a service directory, geolocation, and social feed for foreigners in Japan.">
+  <meta property="og:url" content="https://deniseventura.design/tasukete.html">
+  <meta property="og:image" content="https://deniseventura.design/images/T_home.png">
+  <meta property="og:site_name" content="Denise Ventura">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tasukete — Denise Ventura">
+  <meta name="twitter:description" content="Case study: designing Tasukete, a community platform combining a service directory, geolocation, and social feed for foreigners in Japan.">
+  <meta name="twitter:image" content="https://deniseventura.design/images/T_home.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Tasukete Community Platform",
+    "description": "Case study: designing Tasukete, a community platform combining a service directory, geolocation, and social feed for foreigners in Japan.",
+    "image": "images/T_home.png",
+    "genre": ["Product Design", "Community Platform", "Branding"],
+    "author": {
+      "@type": "Person",
+      "name": "Denise Ventura"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/tasukete.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="container py-3">
-        <div class="d-flex justify-content-between align-items-center align-bottom">
-            <a href="https://deniseventura.design/" class="brand-name">Denise Ventura</a>
-            <nav class="flex-grow-1">
-                <a href="https://deniseventura.design/#work" class="nav-link nav-ttop d-inline-block ms-4 float-start">Work</a>
-                <a href="https://deniseventura.design/about.html" class="nav-link nav-ttop d-inline-block ms-4 float-start">About</a>
 
-                <a href="https://deniseventura.design#contact" onClick="this.setAttribute('href', 'mailto:'.concat(atob('ZGVuaXNlaWZlcnJlaXJhQGdtYWlsLmNvbQ==')));" class="nav-link nav-ttop d-inline-block float-end">Say Hello!</a>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
 
+  <!-- Desktop Nav -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">Denise Ventura</a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:deniseiferreira@gmail.com" class="btn-hello">Say Hello!</a>
+    </div>
+  </nav>
 
-                <a href="https://github.com/deniseiferreira" class="nav-link nav-stop d-inline-block  me-4 float-end"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 0C13.8989 0 11.8183 0.424127 9.87708 1.24817C7.93587 2.0722 6.17204 3.28001 4.68631 4.80264C1.68572 7.87772 1.52588e-05 12.0484 1.52588e-05 16.3972C1.52588e-05 23.6448 4.59202 29.7938 10.944 31.9746C11.744 32.1058 12 31.5975 12 31.1547V28.3836C7.56802 29.3674 6.62402 26.1864 6.62402 26.1864C5.88802 24.2843 4.84802 23.776 4.84802 23.776C3.39202 22.7594 4.96002 22.7922 4.96002 22.7922C6.56002 22.9069 7.40802 24.4811 7.40802 24.4811C8.80002 26.9734 11.152 26.2356 12.064 25.842C12.208 24.7762 12.624 24.0547 13.072 23.6448C9.52002 23.2349 5.79202 21.8247 5.79202 15.5774C5.79202 13.7573 6.40002 12.2979 7.44002 11.1337C7.28002 10.7238 6.72002 9.01848 7.60002 6.80485C7.60002 6.80485 8.94402 6.36213 12 8.47737C13.264 8.11663 14.64 7.93626 16 7.93626C17.36 7.93626 18.736 8.11663 20 8.47737C23.056 6.36213 24.4 6.80485 24.4 6.80485C25.28 9.01848 24.72 10.7238 24.56 11.1337C25.6 12.2979 26.208 13.7573 26.208 15.5774C26.208 21.8411 22.464 23.2185 18.896 23.6284C19.472 24.1367 20 25.137 20 26.6619V31.1547C20 31.5975 20.256 32.1222 21.072 31.9746C27.424 29.7774 32 23.6448 32 16.3972C32 14.2439 31.5862 12.1117 30.7821 10.1223C29.978 8.13288 28.7995 6.32526 27.3137 4.80264C25.828 3.28001 24.0642 2.0722 22.123 1.24817C20.1817 0.424127 18.1012 0 16 0Z" fill="#202020"/>
-</svg></a>
+  <!-- Mobile Nav -->
+  <nav class="m-nav">
+    <a href="index.html" class="m-nav-brand">Denise Ventura</a>
+    <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+  </nav>
 
-                <a href="https://www.linkedin.com/in/deniseiferreira/" class="nav-link nav-stop d-inline-block me-4 float-end"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 0C7.16332 0 -1.52588e-05 7.16333 -1.52588e-05 16C-1.52588e-05 24.8367 7.16332 32 16 32C24.8367 32 32 24.8367 32 16C32 7.16333 24.8367 0 16 0ZM12.0833 22.6317H8.84332V12.205H12.0833V22.6317ZM10.4433 10.925C9.41998 10.925 8.75832 10.2 8.75832 9.30333C8.75832 8.38833 9.43998 7.685 10.485 7.685C11.53 7.685 12.17 8.38833 12.19 9.30333C12.19 10.2 11.53 10.925 10.4433 10.925ZM23.9167 22.6317H20.6767V16.8533C20.6767 15.5083 20.2067 14.595 19.035 14.595C18.14 14.595 17.6083 15.2133 17.3733 15.8083C17.2867 16.02 17.265 16.32 17.265 16.6183V22.63H14.0233V15.53C14.0233 14.2283 13.9817 13.14 13.9383 12.2033H16.7533L16.9017 13.6517H16.9667C17.3933 12.9717 18.4383 11.9683 20.1867 11.9683C22.3183 11.9683 23.9167 13.3967 23.9167 16.4667V22.6317Z" fill="#202020"/>
-</svg></a>
+  <label class="m-menu-overlay" for="menu-toggle" aria-hidden="true"></label>
 
-            </nav>
-           <!-- Hamburger Menu -->
-            <div class="burger">
-                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                    </svg>
-                </a>
-            </div>
+  <div class="m-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html#work" class="m-menu-link">Work</a>
+    <a href="index.html#about" class="m-menu-link">About</a>
+    <div class="m-menu-cta">
+      <a href="mailto:deniseiferreira@gmail.com" class="m-menu-btn">Say Hello!</a>
+    </div>
+  </div>
 
+  <!-- ========== HERO ========== -->
+  <section class="cs-hero tasukete-hero" style="background-image:url('images/T_home.png')">
+    <div class="cs-hero-overlay tasukete-overlay"></div>
+    <div class="cs-hero-content">
+      <div class="cs-tag-row">
+        <span class="cs-tag cs-tag-blue">Product Design</span>
+        <span class="cs-tag cs-tag-green">Community</span>
+        <span class="cs-tag cs-tag-gray">Web</span>
+      </div>
+      <h1 class="cs-hero-title">Lost in translation,<br>every single day</h1>
+      <p class="cs-hero-sub">A community platform designed to help foreigners navigate daily life in Japan, combining a service directory, geolocation, and social feed in one place.</p>
+    </div>
+  </section>
+
+  <!-- ========== META STRIP ========== -->
+  <div class="meta-strip">
+    <div class="meta-strip-inner">
+      <div class="meta-item">
+        <span class="meta-label">MY ROLE</span>
+        <span class="meta-value">Co-Founder · Product Design · Branding</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">TYPE</span>
+        <span class="meta-value">Beta Version</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">SCOPE</span>
+        <span class="meta-value">Research · UX/UI · Branding</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">PLATFORM</span>
+        <span class="meta-value">Web Platform</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 01: THE PROBLEM ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">01: THE PROBLEM</p>
+        <h2 class="sec-title">Language barriers turn daily life into a daily struggle</h2>
+        <p class="sec-lead">Many foreigners in Japan face compounding challenges: services aren't available in their language, information is fragmented across dozens of sources, and the social cost of asking for help is high. The result is isolation, not just from society, but from basic services.</p>
+      </div>
+
+      <div class="prob-row">
+        <div class="prob-card">
+          <span class="card-num">P.01</span>
+          <h3 class="card-title">Information fragmentation</h3>
+          <p class="card-desc">No single source for multilingual services. Foreigners piece together information from forums, Facebook groups, and word of mouth, unreliable and exhausting.</p>
         </div>
-
-        <!-- Dropdown Links for mobile -->
-        <div id="myLinks">
-            <a href="https://deniseventura.design/#work" class="nav-link nav-ttop d-inline-block float-start">Work</a>
-            <a href="https://deniseventura.design/about.html" class="nav-link nav-ttop d-inline-block float-start">About</a>
-            <a href="https://deniseventura.design#contact" onClick="this.setAttribute('href', 'mailto:'.concat(atob('ZGVuaXNlaWZlcnJlaXJhQGdtYWlsLmNvbQ==')));" class="nav-link nav-ttop d-inline-block float-end">Say Hello!</a>
-            <a href="https://github.com/deniseiferreira" class="nav-link nav-stop d-inline-block float-end">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 0C13.8989 0 11.8183 0.424127 9.87708 1.24817C7.93587 2.0722 6.17204 3.28001 4.68631 4.80264C1.68572 7.87772 1.52588e-05 12.0484 1.52588e-05 16.3972C1.52588e-05 23.6448 4.59202 29.7938 10.944 31.9746C11.744 32.1058 12 31.5975 12 31.1547V28.3836C7.56802 29.3674 6.62402 26.1864 6.62402 26.1864C5.88802 24.2843 4.84802 23.776 4.84802 23.776C3.39202 22.7594 4.96002 22.7922 4.96002 22.7922C6.56002 22.9069 7.40802 24.4811 7.40802 24.4811C8.80002 26.9734 11.152 26.2356 12.064 25.842C12.208 24.7762 12.624 24.0547 13.072 23.6448C9.52002 23.2349 5.79202 21.8247 5.79202 15.5774C5.79202 13.7573 6.40002 12.2979 7.44002 11.1337C7.28002 10.7238 6.72002 9.01848 7.60002 6.80485C7.60002 6.80485 8.94402 6.36213 12 8.47737C13.264 8.11663 14.64 7.93626 16 7.93626C17.36 7.93626 18.736 8.11663 20 8.47737C23.056 6.36213 24.4 6.80485 24.4 6.80485C25.28 9.01848 24.72 10.7238 24.56 11.1337C25.6 12.2979 26.208 13.7573 26.208 15.5774C26.208 21.8411 22.464 23.2185 18.896 23.6284C19.472 24.1367 20 25.137 20 26.6619V31.1547C20 31.5975 20.256 32.1222 21.072 31.9746C27.424 29.7774 32 23.6448 32 16.3972C32 14.2439 31.5862 12.1117 30.7821 10.1223C29.978 8.13288 28.7995 6.32526 27.3137 4.80264C25.828 3.28001 24.0642 2.0722 22.123 1.24817C20.1817 0.424127 18.1012 0 16 0Z" fill="#202020"/>
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/deniseiferreira/" class="nav-link nav-stop d-inline-block float-end">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 0C7.16332 0 -1.52588e-05 7.16333 -1.52588e-05 16C-1.52588e-05 24.8367 7.16332 32 16 32C24.8367 32 32 24.8367 32 16C32 7.16333 24.8367 0 16 0ZM12.0833 22.6317H8.84332V12.205H12.0833V22.6317ZM10.4433 10.925C9.41998 10.925 8.75832 10.2 8.75832 9.30333C8.75832 8.38833 9.43998 7.685 10.485 7.685C11.53 7.685 12.17 8.38833 12.19 9.30333C12.19 10.2 11.53 10.925 10.4433 10.925ZM23.9167 22.6317H20.6767V16.8533C20.6767 15.5083 20.2067 14.595 19.035 14.595C18.14 14.595 17.6083 15.2133 17.3733 15.8083C17.2867 16.02 17.265 16.32 17.265 16.6183V22.63H14.0233V15.53C14.0233 14.2283 13.9817 13.14 13.9383 12.2033H16.7533L16.9017 13.6517H16.9667C17.3933 12.9717 18.4383 11.9683 20.1867 11.9683C22.3183 11.9683 23.9167 13.3967 23.9167 16.4667V22.6317Z" fill="#202020"/>
-                </svg>
-            </a>
+        <div class="prob-card">
+          <span class="card-num">P.02</span>
+          <h3 class="card-title">No trusted resource layer</h3>
+          <p class="card-desc">Existing services lacked ratings or language proficiency indicators, making it impossible to know which providers could actually help.</p>
         </div>
-    </header>
-
-    <section class="text-center case-hero-section tasukete-hero">
-        <div class="container">
-        <h1 class="case-title text-center">Tasukete Social Network</h1>
-        <p class="case-subtitle">
-Tasukete is a social networking platform dedicated to helping foreigners who are not fluent in Japanese. It facilitates access to services in foreign languages, fosters knowledge sharing, and provides a space for addressing questions, making life easier for those navigating a new culture. 
-        </p>
-        <p class="case-team"><m>Team:</m> 1 Designer + 2 Engineers </p>
-		<p class="case-role"><m>My Role:</m> Product Concept, Research, UX/UI Design, Branding.</p>
-         </div>
-    </section>
-
-    <section class="section-surviving">
-		<div class="container">
-			<h2 class="fw600">Surviving in Japan</h2>
-            <div class="row mb-5">
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p>
-    					Many foreigners in Japan face challenges accessing services and information due to language barriers, leading to isolation, frustration, and difficulties in daily life.
-                        
-                    </p>
-    					<h4 class="fw600">Goals:</h4>
-                        <ul>
-    					   <li>Create a centralized platform to connect foreigners with services available in various languages.</li>
-    					   <li>Facilitate the exchange of practical and useful information for daily life.</li>
-    					   <li>Provide a space for community and mutual support among users with similar experiences.</li>
-    					   <li>Promote the integration of foreigners into Japanese society with fewer obstacles.</li>
-                        </ul>
-                    
-                </div>
-                <div class="col-md-6">
-                    <img src="images/tasukete/foreigner.png" alt="Surviving in Japan" class="img-fluid rounded">
-                </div>
-            </div>
+        <div class="prob-card">
+          <span class="card-num">P.03</span>
+          <h3 class="card-title">Social isolation</h3>
+          <p class="card-desc">Without a community of people in the same situation, newcomers had no one to ask. The knowledge existed; it just wasn't connected.</p>
         </div>
-    </section>
+      </div>
 
+      <img src="images/Journeymap_tasukete.png" alt="Journey map: The Search for Solutions" class="cs-img">
+      <p class="cs-caption">Journey map: The Search for Solutions. A Foreigner's Service Journey</p>
+    </div>
+  </div>
 
-    <section class="section-gray">
-        <div class="container">
-            <h2 class="fw600">Creating a more inclusive everyday life</h2>
-            <div class="row">
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p>The design process for this product follows a user-centered approach, ensuring that the platform meets the needs and pain points of foreigners living in Japan.</p>
-                    <p>
-                        <m>Objective:</m> Understand the challenges, behaviors, and needs of foreigners in Japan.<br/><br/>
-                        <m>Methods:</m> Interviews with foreign residents to gather insights on their struggles with language barriers, accessing services, and integrating into Japanese society.<br/><br/>
-                        <m>Outcome:</m> A detailed understanding of the most common pain points.<br/><br/>
-                    </p>
-                        
-                    
-                </div>
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p><m>Pain points:</m></p>
-                    <ul>
-                        <li>Lack of access to essential services because they don’t understand Japanese.</li>
-                        <li>Difficulty finding professionals or service providers who speak other languages.</li>
-                        <li>A sense of isolation from being unable to communicate or clarify doubts.</li>
-                        <li>Barriers to learning and adapting to Japanese culture and needing reliable local information.</li>
-                    </ul>
-                    
-                </div>
-            </div>
+  <!-- ========== 02: RESEARCH ========== -->
+  <div class="cs-sec cs-sec-white">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">02: RESEARCH</p>
+        <h2 class="sec-title">Understanding the foreigner's service journey</h2>
+        <p class="sec-lead">Research mapped the actual experience of finding services as a foreigner in Japan, from initial search, through failed attempts, to established workarounds. Interviews revealed consistent patterns of friction and social dependency.</p>
+      </div>
+
+      <div class="meth-list">
+        <div class="meth-item">
+          <div class="meth-badge">01</div>
+          <div class="meth-content">
+            <p class="meth-title">User interviews</p>
+            <p class="meth-desc">Sessions with foreign residents in Japan across multiple nationalities, focused on service discovery, daily friction, and community reliance.</p>
+          </div>
         </div>
-    </section>
-
-    <section class="section-white">
-        <div class="container">
-            <h2 class="fw600">Product Development Process</h2>
-            <div class="row mb-5">
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p>The <b>Research phase</b>, conducted after defining the problem and gathering initial user insights, focused on exploring potential solutions to address the identified needs. This included analyzing similar platforms and examining successful features to inspire a user-centered design.</p>
-                    <p>During Feature Prioritization, the team evaluated and selected the most relevant and feasible features. Key functionalities, such as intuitive categorization, geolocation tools, and a user feedback system, were prioritized to ensure the MVP addressed the most critical user challenges.</p>
-                </div>
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p>In the <b>Ideation</b> phase, these findings were translated into clear design concepts. Wireframes were created to map out the platform’s user interface and flow, ensuring a straightforward and user-friendly experience. These wireframes were then transformed into detailed mockups for <b>development</b>. Finally, a Beta version (<b>testing</b>) of the platform was launched to gather feedback from users, validating the design and functionality before finalizing the product.</p>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <img src="images/tasukete/sitemap.png" alt="Search, view and management information user task flow" class="img-fluid rounded">
-                    <div class="text-center figure-text">Tasukete - Search, view and management information user task flow</div>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <img src="images/tasukete/wireframing.png" alt="Search, view and management information wireframing" class="img-fluid rounded">
-                    <div class="text-center figure-text">Tasukete - Search, view and management information wireframing</div>
-                </div>
-            </div>
+        <div class="meth-item">
+          <div class="meth-badge">02</div>
+          <div class="meth-content">
+            <p class="meth-title">Journey mapping</p>
+            <p class="meth-desc">Mapped 'The Search for Solutions: A Foreigner's Service Journey' to identify critical friction points and emotional lows.</p>
+          </div>
         </div>
-    </section>
-
-
-    <section class="section-gray">
-        <div class="container">
-            <div class="row" style="margin-bottom: 80px;">
-                <div class="col-md-12 white-bg">
-                    <img src="images/tasukete/tasukete_logo.png" alt="Tasukete Logo" class="img-fluid mx-auto d-block">
-                </div>
-            </div>
-            <h2 class="fw600">Solution</h2>
-            <div class="row">
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p>The solution was to create a platform that combines a dynamic community space with a service directory and geolocation tools, offering a seamless user experience.</p>
-                    <p>The interface was designed to display information in an organized, easy-to-navigate format, enabling users to quickly find services and products categorized by type, location, and language accessibility.</p>
-                    <p>The platform's geolocation feature enhances usability by showing relevant services nearby, making the discovery process efficient and tailored to the user’s current needs.</p>
-
-                    <img src="images/tasukete/services_page.png" alt="Services Page" class="img-fluid image-mt">
-                    <div class="text-center figure-text image-mb"><br />Tasukete - Results List Page</div>
-
-
-                    <p>Users engage with the platform through a dynamic feed where they can post questions, share personal experiences, and provide feedback on services, fostering a collaborative and supportive community. This user-generated content ensures a continuous flow of relevant information, making the platform a valuable resource for both newcomers and long-term residents. To boost engagement, the platform includes a gamification system that rewards users for contributing reviews, answering questions, and sharing insights. Users earn reputation scores, which incentivizes participation and helps them gain recognition within the community.</p>
-
-                    <p>The platform also allows users to save and organize information that is most relevant to them, such as trusted service providers, local tips, or useful resources. This feature provides a personalized experience, making it easy for users to access and manage their favorite content. </p>
-
-                </div>
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <img src="images/tasukete/homepage_locations_page.png" alt="Services Page" class="img-fluid ">
-                    <div class="text-center figure-text image-mb"><br />Tasukete - Homepage: Service/Product Directory | Geolocation | Community</div>
-
-
-                    <p>By combining collaboration, gamification, and customization, the platform becomes not just a space for interaction, but a highly functional tool for managing daily life and building a sense of community. </p>
-                    <p>Additionally, a review and rating system ensures transparency, helping users make informed decisions based on the quality and language proficiency of the services listed. </p>
-                    <p>This integrated approach ensures that users can both contribute to and benefit from a continuously evolving database of resources, creating a self-sustaining and highly engaging community. </p>
-                    
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <img src="images/tasukete/my_favorites_page.png" alt="Services Page" class="img-fluid image-mt">
-                    <div class="text-center figure-text"><br />Tasukete - Profile Page</div>
-
-                </div>
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <img src="images/tasukete/service_page.png" alt="Services Page" class="img-fluid image-mt">
-                    <div class="text-center figure-text"><br />Tasukete - Service Page</div>
-
-                </div>
-            </div>
+        <div class="meth-item">
+          <div class="meth-badge">03</div>
+          <div class="meth-content">
+            <p class="meth-title">Platform audit</p>
+            <p class="meth-desc">Competitive review of expat platforms, service directories, and community apps, identifying feature gaps and trust signals.</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="section-white">
-        <div class="container">
-            <h2 class="fw600">Insights and Outcome</h2>
+      <img src="images/wireframing.png" alt="Wireframes" class="cs-img">
+    </div>
+  </div>
 
-            <div class="row mb-5">
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p>The project successfully developed a user-driven platform to help foreigners navigate daily life in Japan. Combining intuitive service categorization, geolocation tools, and a collaborative review system, the solution offered clarity, usability, and trust.</p>
+  <!-- ========== 03: THE SOLUTION ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow" style="max-width: none;">
+        <p class="sec-tag">03: THE SOLUTION</p>
+        <h2 class="sec-title">One platform. Directory, community, and maps.</h2>
+        <p class="sec-lead" style="max-width: none;">Tasukete combines three layers that expats already use separately, a service directory, a community feed, and geolocation, into a single coherent platform designed for daily use.</p>
+      </div>
 
-                    <p>Challenges included refining the service categorization, creating a self-sustaining business model, and building a scalable brand identity, all of which enhanced the understanding of organizing diverse global information.</p>
-                </div>
-                <div class="col-md-6 d-flex align-self-start flex-column justify-content-center fs16">
-                    <p>Through a functional MVP tested in a private beta with expatriates, the platform's value and usability were validated. My contributions included designing the brand identity and user interface, which were implemented into a functional framework.</p>
-
-                    <p>Although the project did not progress to organic growth, it demonstrated strong potential and laid a foundation for future expansion.</p>
-                </div>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <img src="images/tasukete/screens.png" alt="Search, view and management information user task flow" class="img-fluid" /><br />
-                </div>
-            </div>
+      <div class="tasukete-screens">
+        <div class="tasukete-col">
+          <img src="images/tasukete1.png" alt="Tasukete home screen" class="tasukete-screen">
+          <img src="images/tasukete3.png" alt="Tasukete map" class="tasukete-screen">
         </div>
-    </section>
+        <div class="tasukete-col">
+          <img src="images/tasukete2.png" alt="Tasukete directory" class="tasukete-screen">
+          <img src="images/tasukete4.png" alt="Tasukete community" class="tasukete-screen">
+        </div>
+        <div class="tasukete-col">
+          <img src="images/tasukete5.png" alt="Tasukete profile" class="tasukete-screen">
+        </div>
+      </div>
 
-    <!-- Footer -->
-    <footer style="margin-top:0px;">
-        <div class="d-flex container">
-        <p>© 2025 Denise Ventura | All Rights Reserved.</p>
+      <div class="sol-row tasukete-sol-row-3">
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F5C2.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Service directory</h3>
+          <p class="sol-card-desc">Organised by type, location, and language accessibility, users quickly find services categorised around real needs.</p>
+        </div>
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4CD.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Geolocation</h3>
+          <p class="sol-card-desc">Shows relevant services nearby in real time, making discovery efficient and tailored to the user's current location.</p>
+        </div>
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4AC.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Community feed</h3>
+          <p class="sol-card-desc">Users post questions, share experiences, and review services, creating a self-sustaining, collaborative knowledge base.</p>
+        </div>
+      </div>
+      <div class="sol-row">
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F3C5.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Gamification</h3>
+          <p class="sol-card-desc">Reputation scores reward contributions, reviews, answers, and shared insights. Drives participation and recognition.</p>
+        </div>
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/2B50.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Reviews &amp; ratings</h3>
+          <p class="sol-card-desc">Transparency layer ensuring users make informed decisions based on service quality and language proficiency ratings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
- <nav class="flex-grow-1">
-        <a href="https://deniseventura.design#contact" onClick="this.setAttribute('href', 'mailto:'.concat(atob('ZGVuaXNlaWZlcnJlaXJhQGdtYWlsLmNvbQ==')));"  class="nav-link d-inline-block float-end">Say Hello!</a>
+  <!-- ========== 04: OUTCOMES ========== -->
+  <div class="cs-sec cs-sec-dark">
+    <div class="cs-cont cs-v-80">
+      <div class="narrow">
+        <p class="sec-tag" style="color:rgba(255,255,255,0.4)">04: OUTCOMES</p>
+        <h2 class="sec-title sec-title-white">Validated by the<br>community it was built for.</h2>
+        <p class="sec-lead sec-lead-white">A functional MVP was tested in private beta with expatriates in Japan. The platform's value and usability were validated through real usage, demonstrating strong potential even before organic growth.</p>
+      </div>
 
-        <a href="https://www.linkedin.com/in/deniseiferreira/" class="nav-link d-inline-block  me-4 float-end ">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.480469C5.6376 0.480469 0.479996 5.63807 0.479996 12.0005C0.479996 18.3629 5.6376 23.5205 12 23.5205C18.3624 23.5205 23.52 18.3629 23.52 12.0005C23.52 5.63807 18.3624 0.480469 12 0.480469ZM9.18 16.7753H6.8472V9.26807H9.18V16.7753ZM7.9992 8.34647C7.2624 8.34647 6.786 7.82447 6.786 7.17887C6.786 6.52007 7.2768 6.01367 8.0292 6.01367C8.7816 6.01367 9.2424 6.52007 9.2568 7.17887C9.2568 7.82447 8.7816 8.34647 7.9992 8.34647ZM17.7 16.7753H15.3672V12.6149C15.3672 11.6465 15.0288 10.9889 14.1852 10.9889C13.5408 10.9889 13.158 11.4341 12.9888 11.8625C12.9264 12.0149 12.9108 12.2309 12.9108 12.4457V16.7741H10.5768V11.6621C10.5768 10.7249 10.5468 9.94127 10.5156 9.26687H12.5424L12.6492 10.3097H12.696C13.0032 9.82007 13.7556 9.09767 15.0144 9.09767C16.5492 9.09767 17.7 10.1261 17.7 12.3365V16.7753Z" fill="white"/>
-</svg></a>
+      <div class="met-row">
+        <div class="met-item">
+          <span class="met-val">5</span>
+          <span class="met-lbl">Core features shipped</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">β</span>
+          <span class="met-lbl">Tested in private beta</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">3</span>
+          <span class="met-lbl">Layers in one platform</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">1</span>
+          <span class="met-lbl">Brand built from scratch</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<a href="https://github.com/deniseiferreira" class="nav-link d-inline-block  me-4 float-end ">
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C8.68678 0 7.38642 0.258658 6.17317 0.761205C4.95991 1.26375 3.85752 2.00035 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 14.42 2.87 18.17 6.84 19.5C7.34 19.58 7.5 19.27 7.5 19V17.31C4.73 17.91 4.14 15.97 4.14 15.97C3.68 14.81 3.03 14.5 3.03 14.5C2.12 13.88 3.1 13.9 3.1 13.9C4.1 13.97 4.63 14.93 4.63 14.93C5.5 16.45 6.97 16 7.54 15.76C7.63 15.11 7.89 14.67 8.17 14.42C5.95 14.17 3.62 13.31 3.62 9.5C3.62 8.39 4 7.5 4.65 6.79C4.55 6.54 4.2 5.5 4.75 4.15C4.75 4.15 5.59 3.88 7.5 5.17C8.29 4.95 9.15 4.84 10 4.84C10.85 4.84 11.71 4.95 12.5 5.17C14.41 3.88 15.25 4.15 15.25 4.15C15.8 5.5 15.45 6.54 15.35 6.79C16 7.5 16.38 8.39 16.38 9.5C16.38 13.32 14.04 14.16 11.81 14.41C12.17 14.72 12.5 15.33 12.5 16.26V19C12.5 19.27 12.66 19.59 13.17 19.5C17.14 18.16 20 14.42 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0Z" fill="white"/>
-</svg></a>
-</div>
-    </footer>
+  <!-- ========== 05: REFLECTION ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">05: REFLECTION</p>
+        <h2 class="sec-title">Impact &amp; Insights</h2>
+        <p class="sec-lead">Building for a diaspora community taught me that the hardest UX problem isn't navigation. It's trust. Users won't engage until the platform feels like it belongs to people like them.</p>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    function toggleMenu() {
-    var x = document.getElementById("myLinks");
-    if (x.className === "active") {
-        x.className = "";
-    } else {
-        x.className = "active";
-    }
-}
-    </script>
+      <div class="rf-row">
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F91D.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Trust before features</h3>
+          <p class="rf-desc">The gamification and review systems weren't extras; they were the foundation. Without earned trust, no feature would drive meaningful contribution.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4BC.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Platforms are business models</h3>
+          <p class="rf-desc">Making Tasukete self-sustaining required designing incentive structures, not just interfaces. The hardest design problem was economic, not visual.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F3F7.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Branding for belonging</h3>
+          <p class="rf-desc">The visual identity needed to feel warm and accessible without being naive about the real friction foreigners face daily.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F504.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Iterate on the model, not just the UI</h3>
+          <p class="rf-desc">After MVP, the biggest open questions were about community moderation and content quality, UX challenges that live at the intersection of product and policy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NEXT ========== -->
+  <div class="np-sec">
+    <p class="np-label">NEXT CASE STUDY</p>
+    <h2 class="np-title">Explore more work</h2>
+    <a href="index.html#work" class="np-btn">View all projects →</a>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span class="footer-brand">Denise Ventura</span>
+    <span class="footer-copy">© 2026. All rights reserved</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/denisefventura/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/deniseiferreira" target="_blank">GitHub</a>
+      <a href="mailto:deniseiferreira@gmail.com">Say Hello</a>
+    </div>
+  </footer>
+  <footer class="m-footer">
+    <span class="m-footer-brand">Denise Ventura</span>
+    <span class="m-footer-copy">© 2026. All rights reserved</span>
+  </footer>
+
 </body>
 </html>

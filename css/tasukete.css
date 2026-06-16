@@ -1,0 +1,71 @@
+/* =============================================
+   TASUKETE PAGE STYLES
+   ============================================= */
+
+/* .pen: prob-cards use padding 24, card-num uses DM Sans 14px 600 #1755F4 */
+.prob-card { padding: 24px; }
+.card-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1755F4;
+  letter-spacing: normal;
+}
+
+/* T_home.png is tall — show top of image */
+.cs-hero.tasukete-hero { background-position: top; }
+
+/* Slightly different hero overlay gradient */
+.tasukete-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(12,18,32,0.05) 0%,
+    rgba(12,18,32,0.30) 35%,
+    rgba(12,18,32,0.82) 67%,
+    rgba(12,18,32,0.95) 100%
+  );
+}
+
+/* App screenshots — 3-column staggered layout */
+.tasukete-screens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.tasukete-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tasukete-screen {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+/* Solution cards — row 1 = 3 cols, row 2 = 2 cols */
+.tasukete-sol-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Caption text */
+.cs-caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #9D9B99;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cs-hero { min-height: 560px; }
+  .tasukete-screens { grid-template-columns: 1fr; }
+  .tasukete-sol-row-3 { grid-template-columns: 1fr; }
+  .meth-list { gap: 16px; }
+  .tasukete-screen { border-radius: 12px; }
+  .cs-caption { font-size: 12px; }
+}

@@ -1,0 +1,63 @@
+/* =============================================
+   CRABLY PAGE STYLES
+   ============================================= */
+
+/* .pen: prob-cards use padding 24, card-num uses DM Sans 14px 600 #1755F4 (garmin uses different style) */
+.prob-card { padding: 24px; }
+.card-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1755F4;
+  letter-spacing: normal;
+}
+
+/* Crably process: tighter item spacing vs other case studies */
+.crably-meth { gap: 14px; }
+
+/* Crably solution images — 2-column layout matching .pen imgRow */
+.crably-img-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.crably-img-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.crably-img-right {
+  display: flex;
+}
+
+.crably-img-logo {
+  width: 100%;
+  height: 251px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.crably-img-site {
+  width: 100%;
+  height: 263px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.crably-img-brand {
+  width: 100%;
+  height: 539px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .crably-img-row { grid-template-columns: 1fr; }
+  .crably-img-logo  { height: 240px; border-radius: 12px; }
+  .crably-img-site  { height: 240px; border-radius: 12px; object-fit: contain; }
+  .crably-img-brand { height: 520px; border-radius: 12px; object-fit: contain; }
+  .crably-meth { gap: 16px; }
+}

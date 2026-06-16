@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garmin Connect Redesign — Denise Ventura</title>
+  <meta name="description" content="Case study: redesigning Garmin Connect from a clinical data dashboard into a contextual health intelligence app for serious athletes.">
+  <link rel="canonical" href="https://deniseventura.design/garmin.html">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Garmin Connect Redesign — Denise Ventura">
+  <meta property="og:description" content="Case study: redesigning Garmin Connect from a clinical data dashboard into a contextual health intelligence app for serious athletes.">
+  <meta property="og:url" content="https://deniseventura.design/garmin.html">
+  <meta property="og:image" content="https://deniseventura.design/images/garmin/hero.jpg">
+  <meta property="og:site_name" content="Denise Ventura">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Garmin Connect Redesign — Denise Ventura">
+  <meta name="twitter:description" content="Case study: redesigning Garmin Connect from a clinical data dashboard into a contextual health intelligence app for serious athletes.">
+  <meta name="twitter:image" content="https://deniseventura.design/images/garmin/hero.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Garmin Connect Redesign",
+    "description": "Case study: redesigning Garmin Connect from a clinical data dashboard into a contextual health intelligence app for serious athletes.",
+    "image": "images/garmin/hero.jpg",
+    "genre": ["Product Design", "UX Research", "Mobile App"],
+    "author": {
+      "@type": "Person",
+      "name": "Denise Ventura"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/garmin.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+
+  <!-- Desktop Nav -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">Denise Ventura</a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:deniseiferreira@gmail.com" class="btn-hello">Say Hello!</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="m-nav">
+    <a href="index.html" class="m-nav-brand">Denise Ventura</a>
+    <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+  </nav>
+
+  <label class="m-menu-overlay" for="menu-toggle" aria-hidden="true"></label>
+
+  <div class="m-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html#work" class="m-menu-link">Work</a>
+    <a href="index.html#about" class="m-menu-link">About</a>
+    <div class="m-menu-cta">
+      <a href="mailto:deniseiferreira@gmail.com" class="m-menu-btn">Say Hello!</a>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="cs-hero garmin-hero">
+    <div class="cs-hero-overlay garmin-overlay"></div>
+    <div class="cs-hero-content">
+      <div class="cs-tag-row">
+        <span class="cs-tag cs-tag-blue">Product Design</span>
+        <span class="cs-tag cs-tag-green">Mobile App</span>
+        <span class="cs-tag cs-tag-gray">Health &amp; Fit</span>
+      </div>
+      <h1 class="cs-hero-title">When hardware<br>outgrows its software</h1>
+      <p class="cs-hero-sub">A proposal to redesign Garmin Connect, transforming a clinical data dashboard into a contextual health intelligence layer for serious athletes.</p>
+    </div>
+  </section>
+
+  <!-- ========== META STRIP ========== -->
+  <div class="meta-strip">
+    <div class="meta-strip-inner">
+      <div class="meta-item">
+        <span class="meta-label">MY ROLE</span>
+        <span class="meta-value">Lead Product Designer</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">TYPE</span>
+        <span class="meta-value">Self-initiated Proposal</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">SCOPE</span>
+        <span class="meta-value">UX Research · Product Strategy · UX/UI Redesign</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">PLATFORM</span>
+        <span class="meta-value">Mobile App</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 01: THE CHALLENGE ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">01: THE CHALLENGE</p>
+        <h2 class="sec-title">A hardware icon with a software crisis</h2>
+        <p class="sec-lead">Garmin makes some of the most respected fitness devices in the world, used by everyone from everyday runners to elite athletes, mountaineers, and military professionals. But its companion app, Garmin Connect, can sometimes feel harder to connect with on a human level. Users are given a huge amount of biometric data, yet often without enough context or practical guidance to help them understand what it means or how to act on it in their daily lives.</p>
+      </div>
+
+      <div class="garmin-quote-block">
+        <p class="garmin-quote-text">"The hardware is excellent. The software leaves a lot to be desired, and it's becoming outdated."</p>
+        <p class="garmin-quote-cite">Vitor, Garmin Instinct user for 2.5 years</p>
+      </div>
+
+      <p class="sec-lead" style="max-width:100%">This goes beyond a minor usability issue. As competitive platforms continue to make health insights feel more intuitive and actionable, Garmin Connect can sometimes feel overly focused on data, offering plenty of information but less clarity, interpretation, and practical day to day guidance.</p>
+
+      <div class="prob-grid">
+        <div class="prob-row">
+          <div class="prob-card">
+            <span class="card-num">P.01</span>
+            <h3 class="card-title">No morning narrative</h3>
+            <p class="card-desc">Users see raw numbers, a Sleep Score of 72, HRV of 41, but receive no contextual interpretation. What does it mean for today's training?</p>
+          </div>
+          <div class="prob-card">
+            <span class="card-num">P.02</span>
+            <h3 class="card-title">Activity history has no consistent home</h3>
+            <p class="card-desc">Activities surface in three places (Home, Profile, Activities tab) with different formats each time. Users can't form a consistent mental model of where their data lives.</p>
+          </div>
+          <div class="prob-card">
+            <span class="card-num">P.03</span>
+            <h3 class="card-title">Inaccessible sleep visualisation</h3>
+            <p class="card-desc">Light sleep and wake periods share nearly identical shades of pink. Users can't distinguish stages without reading the legend on every single view.</p>
+          </div>
+        </div>
+        <div class="prob-row">
+          <div class="prob-card">
+            <span class="card-num">P.04</span>
+            <h3 class="card-title">Historical data trapped</h3>
+            <p class="card-desc">To find a specific HRV reading from three weeks ago, you scroll backwards date by date. No filtering, no search, no range selection.</p>
+          </div>
+          <div class="prob-card">
+            <span class="card-num">P.05</span>
+            <h3 class="card-title">Body Battery without a story</h3>
+            <p class="card-desc">Body Battery is a single number with no trend and no context. Users cannot tell if they are recovering well or draining faster than usual compared to recent days.</p>
+          </div>
+          <div class="prob-card">
+            <span class="card-num">P.06</span>
+            <h3 class="card-title">No signal for healthy consistency</h3>
+            <p class="card-desc">Each day is logged in isolation. There is no view of whether sleep, steps and stress targets are being met consistently over time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ORIGINAL APP SCREENSHOTS ========== -->
+  <div class="cs-sec cs-sec-white">
+    <div class="cs-cont cs-v-56">
+      <div class="narrow">
+        <p class="garmin-shot-tag">Original App: Identified Pain Points</p>
+        <p class="sec-lead" style="font-size:14px;max-width:100%">Screenshots from Garmin Connect prior to redesign, captured during user observation sessions.</p>
+      </div>
+      <div class="garmin-shot-row">
+        <div class="garmin-shot-col">
+          <img src="images/garmin/original_home.png" alt="Garmin Connect home screen" class="garmin-shot-img">
+          <p class="garmin-screen-cap">Home: data dump</p>
+        </div>
+        <div class="garmin-shot-col">
+          <img src="images/garmin/2SleepScore3.PNG" alt="Garmin sleep score" class="garmin-shot-img">
+          <p class="garmin-screen-cap">Sleep: ambiguous colours</p>
+        </div>
+        <div class="garmin-shot-col">
+          <img src="images/garmin/original_activities.png" alt="Garmin activities list" class="garmin-shot-img">
+          <p class="garmin-screen-cap">Activities: unintuitive path</p>
+        </div>
+        <div class="garmin-shot-col">
+          <img src="images/garmin/2SleepScore6.PNG" alt="Garmin body battery" class="garmin-shot-img">
+          <p class="garmin-screen-cap">Body Battery: buried in data</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 02: RESEARCH, LANDSCAPE & STRATEGY ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">02: RESEARCH, LANDSCAPE &amp; STRATEGY</p>
+        <h2 class="sec-title">One insight, three angles</h2>
+        <p class="sec-lead">User interviews, App Store synthesis, and a competitive audit all pointed to the same conclusion. Garmin Connect has the richest biometric data in the category. The interface just does not make it feel that way.</p>
+      </div>
+
+      <div class="garmin-blue-div"></div>
+
+      <div class="garmin-insights">
+        <div class="garmin-irow">
+          <span class="garmin-ibadge">User Research</span>
+          <p class="garmin-itext">Users check sleep and readiness every morning but numbers without context leave them guessing. A score tells you nothing about whether to train hard today.</p>
+        </div>
+        <div class="garmin-irow">
+          <span class="garmin-ibadge">Competitive Landscape</span>
+          <p class="garmin-itext">Competitors make health data feel intuitive and actionable. Garmin has the hardware precision advantage but it is buried under interface complexity.</p>
+        </div>
+        <div class="garmin-irow">
+          <span class="garmin-ibadge">Strategic Response</span>
+          <p class="garmin-itext">Garmin does not need to copy competitors. It needs to build a UI layer that makes its unmatched biometric data legible, contextual, and motivating.</p>
+        </div>
+      </div>
+
+      <div class="garmin-strat-head">
+        <h3 class="garmin-strat-head-title">Design Priorities</h3>
+        <p class="garmin-strat-head-sub">Three strategic decisions that shaped every design choice.</p>
+      </div>
+
+      <div class="garmin-sc-grid">
+        <div class="garmin-sc">
+          <span class="garmin-sc-num">01</span>
+          <p class="garmin-sc-title">Morning Context First</p>
+          <p class="garmin-sc-desc">Replace the data dump home screen with a contextual morning summary. Instead of numbers, give users a sentence: You slept well. HRV is trending up. Your body says go hard today. Surface the watch motivational phrases in the app interface.</p>
+        </div>
+        <div class="garmin-sc">
+          <span class="garmin-sc-num">02</span>
+          <p class="garmin-sc-title">Sleep as a Story</p>
+          <p class="garmin-sc-desc">Redesign the sleep module with accessible, distinct colours across all four stages. Add a plain language nightly summary at the top.</p>
+        </div>
+        <div class="garmin-sc">
+          <span class="garmin-sc-num">03</span>
+          <p class="garmin-sc-title">All Activities List</p>
+          <p class="garmin-sc-desc">Introduce a unified All Activities list as a dedicated entry point, giving users a clear, chronological view of every logged workout.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 03: PROCESS ========== -->
+  <div class="cs-sec cs-sec-white">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">03: PROCESS</p>
+        <h2 class="sec-title">How the work evolved</h2>
+        <p class="sec-lead">This project followed a Design Thinking approach from the start. Lead with empathy, understand the real problem beneath the surface complaints, then ideate and prototype before committing to a final direction.</p>
+      </div>
+
+      <div class="garmin-diag">
+        <div class="garmin-ph">
+          <div class="garmin-ph-top">
+            <div class="garmin-ph-circle"><span class="garmin-ph-num">1</span></div>
+            <div class="garmin-ph-labels">
+              <span class="garmin-ph-label">EMPATHISE</span>
+              <p class="garmin-ph-title">Discovery &amp; Audit</p>
+            </div>
+          </div>
+          <p class="garmin-ph-desc">Immersed in Garmin Connect as an active user. Documented every friction point and delight. Ran a heuristic evaluation and catalogued issues.</p>
+        </div>
+        <div class="garmin-diag-arrow">→</div>
+        <div class="garmin-ph">
+          <div class="garmin-ph-top">
+            <div class="garmin-ph-circle"><span class="garmin-ph-num">2</span></div>
+            <div class="garmin-ph-labels">
+              <span class="garmin-ph-label">EMPATHISE</span>
+              <p class="garmin-ph-title">User Research</p>
+            </div>
+          </div>
+          <p class="garmin-ph-desc">Conducted 60 minute contextual interviews observing participants in the live app. Supplemented with App Store review synthesis to surface patterns at scale.</p>
+        </div>
+        <div class="garmin-diag-arrow">→</div>
+        <div class="garmin-ph">
+          <div class="garmin-ph-top">
+            <div class="garmin-ph-circle"><span class="garmin-ph-num">3</span></div>
+            <div class="garmin-ph-labels">
+              <span class="garmin-ph-label">DEFINE</span>
+              <p class="garmin-ph-title">Synthesis &amp; Framing</p>
+            </div>
+          </div>
+          <p class="garmin-ph-desc">Built an empathy map and applied the 4U framework to every finding. Narrowed issues down to 3 clearly defined strategic opportunities.</p>
+        </div>
+        <div class="garmin-diag-arrow">→</div>
+        <div class="garmin-ph">
+          <div class="garmin-ph-top">
+            <div class="garmin-ph-circle"><span class="garmin-ph-num">4</span></div>
+            <div class="garmin-ph-labels">
+              <span class="garmin-ph-label">IDEATE &amp; PROTOTYPE</span>
+              <p class="garmin-ph-title">Design &amp; Iteration</p>
+            </div>
+          </div>
+          <p class="garmin-ph-desc">Started with low fidelity wireframes. Studied health apps in the market to identify the strongest solution for Garmin Connect.</p>
+        </div>
+        <div class="garmin-diag-arrow">→</div>
+        <div class="garmin-ph">
+          <div class="garmin-ph-top">
+            <div class="garmin-ph-circle"><span class="garmin-ph-num">5</span></div>
+            <div class="garmin-ph-labels">
+              <span class="garmin-ph-label">TEST</span>
+              <p class="garmin-ph-title">Validation &amp; Handoff</p>
+            </div>
+          </div>
+          <p class="garmin-ph-desc">Shared interactive prototypes with Garmin users for informal sessions. Observations led to final adjustments and annotated documentation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 04: THE REDESIGN — header + Screen 01: Home (cream) ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont cs-v-100-80">
+      <div class="garmin-red-header">
+        <p class="sec-tag">04: THE REDESIGN</p>
+        <h2 class="sec-title">From data dump to health intelligence</h2>
+        <p class="sec-lead">Five key screens redesigned with a single principle: every screen should answer a question, not just display a number.</p>
+      </div>
+
+      <!-- Screen 01: Home -->
+      <div class="garmin-screen-sec">
+        <div class="garmin-screen-label">
+          <span class="garmin-eyebrow">Screen 01: Home</span>
+          <h3 class="garmin-screen-title">Your morning briefing,<br>not your data archive</h3>
+          <p class="garmin-screen-body">The home screen is structured as a three-tier morning narrative: a coaching voice recommendation at the top ('You're ready to train'), a compact metric strip below, and At a Glance ring gauges for all key health pillars. Every element answers a question rather than just displaying a number.</p>
+          <div class="garmin-cl">
+            <div class="garmin-ci-arrow"><span class="garmin-arrow-dot">↑</span><span>Three-tier information hierarchy following F-pattern scanning</span></div>
+            <div class="garmin-ci-arrow"><span class="garmin-arrow-dot">↑</span><span>Coaching voice replaces raw numbers ('You slept well' before the score)</span></div>
+            <div class="garmin-ci-arrow"><span class="garmin-arrow-dot">→</span><span>Ring gauges replace flat numbers, matching Garmin's native visual language</span></div>
+          </div>
+        </div>
+        <div class="garmin-screens-row garmin-home-imgs">
+          <img src="images/garmin/home_redesign.png" alt="Garmin home redesign" class="garmin-redesign-img">
+          <img src="images/garmin/home_redesign_scrolled.png" alt="Garmin home scrolled" class="garmin-redesign-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CONSISTENCY BAR (cream) ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont cs-v-80">
+      <div class="garmin-red-header">
+        <div class="garmin-cb-tagrow">
+          <span class="garmin-new-badge">NEW</span>
+          <p class="sec-tag">Habit Formation Feature</p>
+        </div>
+        <h2 class="sec-title">Consistency Bar</h2>
+        <p class="sec-lead" style="max-width:720px">Inspired by Seinfeld's 'don't break the chain' method. Each health pillar (Sleep, Activity, Stress and Steps) gets its own 14-day bar chain filled in its signature colour. The hero number counts consecutive days all four pillars were on track simultaneously.</p>
+      </div>
+      <div class="garmin-cb-v2">
+        <img src="images/garmin/consistency_bar.png" alt="Consistency Bar component" class="garmin-cb-img-v2">
+        <div class="garmin-spec-cards">
+          <div class="garmin-spec-card">
+            <p class="garmin-spec-label">Chain mechanic</p>
+            <p class="garmin-spec-desc">14 day bars per pillar; height encodes quality: stub = miss, medium = partial, tall = on track.</p>
+          </div>
+          <div class="garmin-spec-card">
+            <p class="garmin-spec-label">Hero metric</p>
+            <p class="garmin-spec-desc">Counts only days when all 4 pillars are on track simultaneously, the true consistency signal.</p>
+          </div>
+          <div class="garmin-spec-card">
+            <p class="garmin-spec-label">Per-pillar streaks</p>
+            <p class="garmin-spec-desc">Each pillar shows its own streak badge to pinpoint the weakest link (e.g. Sleep 9d, Stress 6d).</p>
+          </div>
+          <div class="garmin-spec-card">
+            <p class="garmin-spec-label">CTA</p>
+            <p class="garmin-spec-desc">'Don't break the chain' with today's log prompt, action oriented rather than data passive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SCREEN 02: SLEEP (white) ========== -->
+  <div class="cs-sec cs-sec-white">
+    <div class="cs-cont cs-v-80">
+      <div class="garmin-screen-label">
+        <span class="garmin-eyebrow">Screen 02: Sleep</span>
+        <h3 class="garmin-screen-title">Sleep as a story,<br>not a bar chart</h3>
+        <p class="garmin-screen-body">The sleep module is redesigned around narrative first, data second. A plain-language summary leads. The stage visualisation now uses a four-colour palette that passes WCAG AA contrast requirements.</p>
+        <div class="garmin-cl">
+          <div class="garmin-ci-arrow"><span class="garmin-arrow-dot">↑</span><span>Plain-language nightly summary as the entry point</span></div>
+          <div class="garmin-ci-arrow"><span class="garmin-arrow-dot">↑</span><span>Accessible, distinct colours for all four sleep stages</span></div>
+          <div class="garmin-ci-arrow"><span class="garmin-arrow-dot">↑</span><span>HRV, respiration, and resting HR grouped as "While You Slept"</span></div>
+          <div class="garmin-ci-arrow"><span class="garmin-arrow-dot">→</span><span>7-day comparative view as the default tab, not a secondary option</span></div>
+        </div>
+      </div>
+      <div class="garmin-phone-grid">
+        <div class="garmin-phone-row">
+          <div class="garmin-phone-wrap">
+            <img src="images/garmin/sleep-details.png" alt="Sleep Details" class="garmin-phone-img">
+            <p class="garmin-phone-cap">Sleep Details</p>
+          </div>
+          <div class="garmin-phone-wrap">
+            <img src="images/export_screens/Sleep_Details_Scrolled.png" alt="Sleep Details scrolled" class="garmin-phone-img">
+            <p class="garmin-phone-cap">Sleep Details scrolled</p>
+          </div>
+          <div class="garmin-phone-wrap">
+            <img src="images/export_screens/Sleep_Details_While_You_Slept.png" alt="While You Slept" class="garmin-phone-img">
+            <p class="garmin-phone-cap">While You Slept</p>
+          </div>
+        </div>
+        <div class="garmin-phone-row">
+          <div class="garmin-phone-wrap">
+            <img src="images/export_screens/Sleep_Details_7d.png" alt="7-day comparative" class="garmin-phone-img">
+            <p class="garmin-phone-cap">7-day comparative</p>
+          </div>
+          <div class="garmin-phone-wrap">
+            <img src="images/export_screens/Sleep_Details_7d_Scrolled.png" alt="7-day scrolled" class="garmin-phone-img">
+            <p class="garmin-phone-cap">7-day scrolled</p>
+          </div>
+          <div class="garmin-phone-wrap">
+            <img src="images/export_screens/Sleep_Details_7d_Log.png" alt="Sleep log &amp; history" class="garmin-phone-img">
+            <p class="garmin-phone-cap">Sleep log &amp; history</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== INTERACTION DESIGN (white) ========== -->
+  <div class="cs-sec cs-sec-white garmin-tr-sec">
+    <div class="cs-cont cs-v-80">
+      <div class="garmin-screen-sec">
+        <div class="garmin-screen-label">
+          <span class="garmin-eyebrow">INTERACTION DESIGN</span>
+          <h3 class="garmin-screen-title">One colour scale, every screen</h3>
+          <p class="garmin-screen-body">All quality ratings follow the same colour progression: yellow for Fair, lime for Good, green for Excellent. Applied consistently across the Sleep Score Scale and Training Readiness chip states so users never need to re-learn the scale when switching context.</p>
+        </div>
+        <div class="garmin-tr-img-row">
+          <img src="images/garmin/sleep_score_scale.png" alt="Sleep score scale" class="garmin-tr-img garmin-tr-img-sleep">
+          <img src="images/garmin/training_readiness.png" alt="Training readiness" class="garmin-tr-img garmin-tr-img-tr">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SCREEN 03: ALL ACTIVITIES (cream) ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont cs-v-80">
+      <div class="garmin-act-cont">
+        <div class="garmin-act-text">
+          <span class="garmin-eyebrow">Screen 03: All Activities</span>
+          <h3 class="garmin-act-title">Your workouts,<br>finally front and centre</h3>
+          <p class="garmin-act-body">Activity history is restructured as a chronological, scannable feed, the first tab in the navigation, not buried under the profile. Each card shows the key post-workout summary: type, duration, heart rate zone, and distance at a glance. The same 'All Activities' list appears consistently on the Home screen, Profile, and Activities tab using the same card format and interaction pattern.</p>
+          <div class="garmin-cl">
+            <div class="garmin-ci-arrow">
+              <span class="garmin-arrow-dot">↑</span>
+              <span>Activities promoted to primary bottom navigation position</span>
+            </div>
+            <div class="garmin-ci-arrow">
+              <span class="garmin-arrow-dot">↑</span>
+              <span>Filter by activity type, date range, or heart rate zone</span>
+            </div>
+            <div class="garmin-ci-arrow">
+              <span class="garmin-arrow-dot">→</span>
+              <span>Same 'All Activities' card format used across Home, Profile, and Activities tab; one pattern, no re-learning</span>
+            </div>
+            <div class="garmin-ci-arrow">
+              <span class="garmin-arrow-dot">↑</span>
+              <span>At-a-glance card layout with consistent metric hierarchy</span>
+            </div>
+            <div class="garmin-ci-arrow">
+              <span class="garmin-arrow-dot">↓</span>
+              <span>Removed category-type "Activities" list that confused activity history with activity types</span>
+            </div>
+          </div>
+        </div>
+        <div class="garmin-act-imgs">
+          <img src="images/export_screens/All_Activities.png" alt="All Activities screen" class="garmin-act-img">
+          <img src="images/garmin/profile_redesign.png" alt="Profile redesign" class="garmin-act-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SCREEN 04: ACTIVITY DETAIL (white) ========== -->
+  <div class="cs-sec cs-sec-white garmin-det-sec">
+    <div class="cs-cont cs-v-80">
+      <div class="garmin-screen-sec">
+        <div class="garmin-screen-label">
+          <span class="garmin-eyebrow">Screen 04: Activity Detail</span>
+          <h3 class="garmin-screen-title">The debrief your workout deserves</h3>
+          <p class="garmin-screen-body">The activity detail screen is restructured around the post-workout ritual, first the headline metrics (time, distance, pace), then the heart rate story, then the technical breakdown. The route map is surfaced at the top for GPS activities.</p>
+        </div>
+        <div class="garmin-screens-row garmin-detail-imgs">
+          <img src="images/garmin/activity_detail.png" alt="Activity detail screen" class="garmin-redesign-img">
+          <img src="images/garmin/activity_metrics.png" alt="Activity key metrics" class="garmin-redesign-img">
+        </div>
+        <p class="cs-caption">Activity detail (left) and key metrics breakdown (right)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== BEFORE / AFTER (cream) ========== -->
+  <div class="cs-sec cs-sec-cream garmin-ba-sec">
+    <div class="cs-cont cs-v-80">
+      <div class="narrow">
+        <p class="sec-tag">Before → After</p>
+        <h2 class="sec-title">The delta</h2>
+        <p class="sec-lead">Side-by-side comparisons of the most significant UX changes.</p>
+      </div>
+
+      <div class="garmin-ba-grid">
+
+        <!-- Row 1 -->
+        <div class="garmin-ba-row">
+          <!-- Pair 1: Home Screen -->
+          <div class="garmin-bw">
+            <div class="garmin-ba-labels">
+              <span class="garmin-ba-lbl-before">Before</span>
+              <span class="garmin-ba-lbl-after">After</span>
+            </div>
+            <div class="garmin-ba-imgs">
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-before">BEFORE</span>
+                <img src="images/garmin/original_home.png" alt="Original home" class="garmin-ba-img">
+              </div>
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-after">AFTER</span>
+                <img src="images/garmin/home_redesign.png" alt="Redesigned home" class="garmin-ba-img">
+              </div>
+            </div>
+            <p class="garmin-ba-cap">Home Screen: Adding morning narrative context</p>
+          </div>
+          <!-- Pair 2: Sleep -->
+          <div class="garmin-bw">
+            <div class="garmin-ba-labels">
+              <span class="garmin-ba-lbl-before">Before</span>
+              <span class="garmin-ba-lbl-after">After</span>
+            </div>
+            <div class="garmin-ba-imgs">
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-before">BEFORE</span>
+                <img src="images/garmin/original_sleep.png" alt="Original sleep" class="garmin-ba-img">
+              </div>
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-after">AFTER</span>
+                <img src="images/garmin/sleep-details.png" alt="Redesigned sleep" class="garmin-ba-img">
+              </div>
+            </div>
+            <p class="garmin-ba-cap">Sleep Details: Narrative summary + accessible colour system</p>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="garmin-ba-row">
+          <!-- Pair 3: Activities -->
+          <div class="garmin-bw">
+            <div class="garmin-ba-labels">
+              <span class="garmin-ba-lbl-before">Before</span>
+              <span class="garmin-ba-lbl-after">After</span>
+            </div>
+            <div class="garmin-ba-imgs">
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-before">BEFORE</span>
+                <img src="images/garmin/5ActivityHistory6.jpeg" alt="Original activities" class="garmin-ba-img">
+              </div>
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-after">AFTER</span>
+                <img src="images/garmin/activities_redesign.png" alt="Redesigned activities" class="garmin-ba-img">
+              </div>
+            </div>
+            <p class="garmin-ba-cap">Activities: Unified history vs. type categorisation</p>
+          </div>
+          <!-- Pair 4: Activity Detail -->
+          <div class="garmin-bw">
+            <div class="garmin-ba-labels">
+              <span class="garmin-ba-lbl-before">Before</span>
+              <span class="garmin-ba-lbl-after">After</span>
+            </div>
+            <div class="garmin-ba-imgs">
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-before">BEFORE</span>
+                <img src="images/garmin/original_activity_detail.jpg" alt="Original activity detail" class="garmin-ba-img">
+              </div>
+              <div class="garmin-ba-panel">
+                <span class="garmin-ba-pill garmin-pill-after">AFTER</span>
+                <img src="images/garmin/activity_detail.png" alt="Redesigned activity detail" class="garmin-ba-img">
+              </div>
+            </div>
+            <p class="garmin-ba-cap">Activity Detail: Structured debrief hierarchy</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 05: OUTCOMES ========== -->
+  <div class="cs-sec cs-sec-dark garmin-outcomes-sec">
+    <div class="cs-cont cs-v-80">
+      <div class="narrow">
+        <p class="sec-tag" style="color:rgba(255,255,255,0.4)">05: OUTCOME</p>
+        <h2 class="sec-title sec-title-white">Design impact: projected</h2>
+        <p class="sec-lead sec-lead-white">As a proposal, these are projected improvements based on the problems identified. Validation with real users would be required before shipping.</p>
+      </div>
+
+      <div class="met-row">
+        <div class="met-item">
+          <span class="met-val">4→1</span>
+          <span class="met-lbl">Taps to find most recent activity</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">100%</span>
+          <span class="met-lbl">Sleep stage colours pass WCAG AA</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">3</span>
+          <span class="met-lbl">Screens redesigned with contextual narrative</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 06: REFLECTION ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">06: REFLECTION</p>
+        <h2 class="sec-title">Insights</h2>
+        <p class="sec-lead">Redesigning a mature product used by serious athletes surfaces a consistent tension: the richer the data, the more essential the narrative layer becomes. Without context, every metric is just a number. Working without access to Garmin's design system or analytics forced every decision to be grounded in observed behaviour rather than assumptions, which made the research stronger and the constraints more honest.</p>
+      </div>
+
+      <div class="garmin-rf-quote">
+        <p class="garmin-rf-qtext">"Users don't complain about the right things, they complain about symptoms, not causes. The real problem is never what they say it is in the first answer."</p>
+        <p class="garmin-rf-qcite">Observation from the user interview process</p>
+      </div>
+
+      <div class="rf-row">
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F3AF.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Observed behaviour beats reported behaviour</h3>
+          <p class="rf-desc">Vitor said he checks the app "for everything." When observed live, he only checked sleep, HRV, and heart rate. The live session revealed the real mental model; the interview script alone would have missed it.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/2696.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Simplification without interpretation is still a failure</h3>
+          <p class="rf-desc">Garmin's 2024 redesign removed data clutter but replaced it with nothing. It swung from data overload to data obscurity, skipping the crucial middle state: a view that interprets rather than just displays. Reducing complexity only works when something more meaningful takes its place.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F310.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Constraints are design tools</h3>
+          <p class="rf-desc">Having no access to Garmin's design system forced me to build components from first principles. Reverse-engineering the interface revealed many of the app's underlying structural problems.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4D0.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Research quality over quantity</h3>
+          <p class="rf-desc">The experiences reported during user interviews closely matched patterns found across App Store reviews. This convergence between interview insights and large-scale review data strengthens the findings and informs prioritisation.</p>
+        </div>
+      </div>
+
+      <div class="garmin-next-steps">
+        <h3 class="garmin-ns-title">If this were real: next steps</h3>
+        <div class="garmin-ni">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F3AF.svg" class="garmin-ni-em" alt="" aria-hidden="true">
+          <div class="garmin-ni-body">
+            <p class="garmin-ni-title">Training goals on mobile</p>
+            <p class="garmin-ni-desc">Weekly and monthly training targets are currently only accessible on the desktop browser. Bringing goal-setting and progress tracking to mobile is the highest-impact missing feature, identified in the task analysis as entirely unreachable for users who manage training from their phone.</p>
+          </div>
+        </div>
+        <div class="garmin-ni">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F5C2.svg" class="garmin-ni-em" alt="" aria-hidden="true">
+          <div class="garmin-ni-body">
+            <p class="garmin-ni-title">Activity filtering and direct comparison</p>
+            <p class="garmin-ni-desc">Users cannot filter their activity log by sport type, nor compare a current session directly against a previous equivalent. Both were identified as top friction points; the history tab functions as an archive today, not an analytical tool.</p>
+          </div>
+        </div>
+        <div class="garmin-ni">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4A1.svg" class="garmin-ni-em" alt="" aria-hidden="true">
+          <div class="garmin-ni-body">
+            <p class="garmin-ni-title">Inline metric explanations</p>
+            <p class="garmin-ni-desc">Users routinely search Google to understand what HRV Status, Training Readiness, and Body Battery mean for their daily decisions. An on-demand explanation layer, shown inline and never in the way, would close the gap between data and understanding without simplifying the product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NEXT ========== -->
+  <div class="np-sec">
+    <p class="np-label">NEXT CASE STUDY</p>
+    <h2 class="np-title">Explore more work</h2>
+    <a href="index.html#work" class="np-btn">View all projects →</a>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span class="footer-brand">Denise Ventura</span>
+    <span class="footer-copy">© 2026. All rights reserved</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/denisefventura/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/deniseiferreira" target="_blank">GitHub</a>
+      <a href="mailto:deniseiferreira@gmail.com">Say Hello</a>
+    </div>
+  </footer>
+  <footer class="m-footer">
+    <span class="m-footer-brand">Denise Ventura</span>
+    <span class="m-footer-copy">© 2026. All rights reserved</span>
+  </footer>
+
+</body>
+</html>

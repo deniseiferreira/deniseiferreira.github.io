@@ -1,0 +1,39 @@
+/* =============================================
+   KNOWATERLEAK PAGE STYLES
+   ============================================= */
+
+.kw-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(12,18,32,0.05) 0%,
+    rgba(12,18,32,0.30) 40%,
+    rgba(12,18,32,0.82) 80%,
+    rgba(12,18,32,0.95) 100%
+  );
+}
+
+/* .pen: prob-cards use padding 24, card-num uses DM Sans 14px 600 #1755F4 */
+.prob-card { padding: 24px; }
+.card-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1755F4;
+  letter-spacing: normal;
+}
+
+/* Challenge section narrow is wider than standard (847px per .pen vs default 720px) */
+.kw-wide { max-width: 847px; }
+
+/* Solution images: fixed height 280px, object-fit contain (mode: fit in .pen) */
+.kw-sol-img {
+  height: 280px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .cs-hero { min-height: 480px; }
+  .cs-img-row { gap: 16px; }
+  .rf-row { row-gap: 20px; }
+  .kw-sol-img { height: auto; }
+}

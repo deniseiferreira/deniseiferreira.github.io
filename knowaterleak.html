@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KnoWaterleaks — Denise Ventura</title>
+  <meta name="description" content="Case study: redesigning a GIS risk tool that surfaces pipe age, diameter, and risk directly on the map for water utility engineers.">
+  <link rel="canonical" href="https://deniseventura.design/knowaterleak.html">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="KnoWaterleaks — Denise Ventura">
+  <meta property="og:description" content="Case study: redesigning a GIS risk tool that surfaces pipe age, diameter, and risk directly on the map for water utility engineers.">
+  <meta property="og:url" content="https://deniseventura.design/knowaterleak.html">
+  <meta property="og:image" content="https://deniseventura.design/images/Pipes_3.png">
+  <meta property="og:site_name" content="Denise Ventura">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KnoWaterleaks — Denise Ventura">
+  <meta name="twitter:description" content="Case study: redesigning a GIS risk tool that surfaces pipe age, diameter, and risk directly on the map for water utility engineers.">
+  <meta name="twitter:image" content="https://deniseventura.design/images/Pipes_3.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "KnoWaterleaks GIS Risk Tool",
+    "description": "Case study: redesigning a GIS risk tool that surfaces pipe age, diameter, and risk directly on the map for water utility engineers.",
+    "image": "images/Pipes_3.png",
+    "genre": ["Product Design", "GIS", "Data Visualization"],
+    "author": {
+      "@type": "Person",
+      "name": "Denise Ventura"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/knowaterleak.css">
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+
+  <!-- Desktop Nav -->
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">Denise Ventura</a>
+    <div class="nav-center">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:deniseiferreira@gmail.com" class="btn-hello">Say Hello!</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="m-nav">
+    <a href="index.html" class="m-nav-brand">Denise Ventura</a>
+    <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+  </nav>
+
+  <label class="m-menu-overlay" for="menu-toggle" aria-hidden="true"></label>
+
+  <div class="m-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html#work" class="m-menu-link">Work</a>
+    <a href="index.html#about" class="m-menu-link">About</a>
+    <div class="m-menu-cta">
+      <a href="mailto:deniseiferreira@gmail.com" class="m-menu-btn">Say Hello!</a>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="cs-hero" style="background-image:url('images/Pipes_3.png')">
+    <div class="cs-hero-overlay kw-overlay"></div>
+    <div class="cs-hero-content">
+      <div class="cs-tag-row">
+        <span class="cs-tag cs-tag-blue">Product Design</span>
+        <span class="cs-tag cs-tag-green">GIS · Mapping</span>
+        <span class="cs-tag cs-tag-gray">Sattelite data</span>
+      </div>
+      <h1 class="cs-hero-title">When data lives<br>in layers, risk lives<br>in the dark</h1>
+      <p class="cs-hero-sub">A visual tool redesigned to surface pipe age, diameter, and risk directly on infrastructure maps, eliminating layer switching for water utility engineers.</p>
+    </div>
+  </section>
+
+  <!-- ========== META STRIP ========== -->
+  <div class="meta-strip">
+    <div class="meta-strip-inner">
+      <div class="meta-item">
+        <span class="meta-label">MY ROLE</span>
+        <span class="meta-value">Product Design Lead</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">TYPE</span>
+        <span class="meta-value">In-house Project</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">SCOPE</span>
+        <span class="meta-value">Research · Strategy · UX/UI Design</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">PLATFORM</span>
+        <span class="meta-value">Cloud-based Mapping</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 01: THE CHALLENGE ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont cs-v-100-48">
+      <div class="narrow kw-wide">
+        <p class="sec-tag">01: THE CHALLENGE</p>
+        <h2 class="sec-title">Infrastructure data buried in layers</h2>
+        <p class="sec-lead">Municipalities managing aging water infrastructure faced a critical gap: risk maps showed where pipes were, but not why they were at risk. Maintenance decisions relied on manual layer toggling, slow, error-prone, and invisible to field teams.</p>
+      </div>
+
+      <img src="images/knowaterleak_before.png" alt="Before redesign" class="cs-img">
+
+      <div class="prob-row">
+        <div class="prob-card">
+          <span class="card-num">P.01</span>
+          <h3 class="card-title">Layer overload</h3>
+          <p class="card-desc">Separate attribute layers caused visual clutter and overlapping data. Engineers toggled between views rather than seeing the full picture at once.</p>
+        </div>
+        <div class="prob-card">
+          <span class="card-num">P.02</span>
+          <h3 class="card-title">No contextual risk signal</h3>
+          <p class="card-desc">Risk maps lacked pipe installation year and diameter, the two attributes that most directly explain why a section is flagged as high-risk.</p>
+        </div>
+        <div class="prob-card">
+          <span class="card-num">P.03</span>
+          <h3 class="card-title">Reactive maintenance</h3>
+          <p class="card-desc">Without clear multi-attribute context, inspection decisions were driven by complaints rather than proactive, data-informed prioritisation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 02: RESEARCH ========== -->
+  <div class="cs-sec cs-sec-white">
+    <div class="cs-cont cs-v-48-100">
+      <div class="narrow">
+        <p class="sec-tag">02: RESEARCH</p>
+        <h2 class="sec-title">Listening to engineers in the field</h2>
+        <p class="sec-lead">Contextual interviews with municipal engineers, infrastructure managers, and field teams revealed three consistent needs: contextual awareness of pipe conditions, quick visual interpretation, and clear prioritisation of risk hotspots.</p>
+      </div>
+
+      <div class="meth-list">
+        <div class="meth-item">
+          <div class="meth-badge">01</div>
+          <div class="meth-content">
+            <p class="meth-title">Contextual interviews</p>
+            <p class="meth-desc">Sessions with municipal engineers and infrastructure managers, focused on map usage, decision-making workflows, and inspection triggers.</p>
+          </div>
+        </div>
+        <div class="meth-item">
+          <div class="meth-badge">02</div>
+          <div class="meth-content">
+            <p class="meth-title">Field observation</p>
+            <p class="meth-desc">Observed inspection workflows and live map usage to capture real behaviour rather than self-reported patterns.</p>
+          </div>
+        </div>
+        <div class="meth-item">
+          <div class="meth-badge">03</div>
+          <div class="meth-content">
+            <p class="meth-title">Competitive audit</p>
+            <p class="meth-desc">Reviewed existing GIS and infrastructure management platforms to identify best practices in attribute visualisation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 03: THE SOLUTION ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">03: THE SOLUTION</p>
+        <h2 class="sec-title">One map. Two attributes. Zero layer switching.</h2>
+        <p class="sec-lead">The redesigned feature integrates pipe installation year and diameter directly into the risk assessment map using two simultaneous visual encodings, colour and line thickness, that engineers can read at a glance.</p>
+      </div>
+
+      <div class="cs-img-row">
+        <img src="images/Pipes_1.webp" alt="Pipe age colour encoding" class="cs-img kw-sol-img">
+        <img src="images/Pipes_2.webp" alt="Pipe diameter thickness encoding" class="cs-img kw-sol-img">
+      </div>
+
+      <div class="sol-row">
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F3A8.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Colour encoding</h3>
+          <p class="sol-card-desc">Five-tone blue scale for pipe age. Darker means older, lighter means newer. Grey tones and dashed lines indicate missing data.</p>
+        </div>
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4CF.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Thickness encoding</h3>
+          <p class="sol-card-desc">Varying line weights for pipe diameter. Thicker lines represent larger pipes. Combines with colour to enable simultaneous multi-attribute reading.</p>
+        </div>
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F50D.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Zoom-responsive display</h3>
+          <p class="sol-card-desc">Visualisation adapts at different zoom levels, maintaining readability and detail whether reviewing a city-wide overview or a single street.</p>
+        </div>
+        <div class="sol-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4D0.svg" class="sol-card-icon" alt="" aria-hidden="true">
+          <h3 class="sol-card-title">Scalable architecture</h3>
+          <p class="sol-card-desc">Modular design accommodates future attribute additions without compromising clarity or usability as the platform evolves.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 04: OUTCOMES ========== -->
+  <div class="cs-sec cs-sec-dark">
+    <div class="cs-cont cs-v-80">
+      <div class="narrow">
+        <p class="sec-tag" style="color:rgba(255,255,255,0.4)">04: OUTCOMES</p>
+        <h2 class="sec-title sec-title-white">Faster decisions.<br>Fewer unnecessary inspections.</h2>
+        <p class="sec-lead sec-lead-white">The feature transformed how water utility engineers assess pipeline risk, eliminating layer switching and improving situational awareness for the entire maintenance team.</p>
+      </div>
+
+      <div class="met-row">
+        <div class="met-item">
+          <span class="met-val">3×</span>
+          <span class="met-lbl">Faster risk assessment</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">0</span>
+          <span class="met-lbl">Layer switches needed</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">2</span>
+          <span class="met-lbl">Attributes simultaneous view</span>
+        </div>
+        <div class="met-item">
+          <span class="met-val">✓</span>
+          <span class="met-lbl">Unnecessary fieldwork costs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 05: REFLECTION ========== -->
+  <div class="cs-sec cs-sec-cream">
+    <div class="cs-cont">
+      <div class="narrow">
+        <p class="sec-tag">05: REFLECTION</p>
+        <h2 class="sec-title">Insights</h2>
+        <p class="sec-lead">Designing for specialists means respecting the mental models they've built over years. The solution succeeded not by replacing their workflow, but by encoding the information they already needed into the layer they already trusted.</p>
+      </div>
+
+      <div class="rf-row">
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F512.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Constraints reveal the real problem</h3>
+          <p class="rf-desc">The limit of one map layer forced a more elegant encoding solution than multiple layers would have. What felt like a constraint became the design principle.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F4CA.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Data has grammar</h3>
+          <p class="rf-desc">Colour and thickness each carry meaning. Mixing them requires careful hierarchy to avoid visual noise, the legend isn't optional, it's structural.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F3AF.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Trust the domain expert</h3>
+          <p class="rf-desc">The most valuable insights came from watching engineers interact with maps, not from asking them what they wanted.</p>
+        </div>
+        <div class="rf-card">
+          <img src="https://cdn.jsdelivr.net/npm/openmoji@14.0.0/black/svg/1F310.svg" class="rf-icon" alt="" aria-hidden="true">
+          <h3 class="rf-title">Scalability is a design decision</h3>
+          <p class="rf-desc">Every encoding choice was evaluated for what it would mean when a third or fourth attribute needed to be added, future-proofing built in from the start.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== NEXT ========== -->
+  <div class="np-sec">
+    <p class="np-label">NEXT CASE STUDY</p>
+    <h2 class="np-title">Explore more work</h2>
+    <a href="index.html#work" class="np-btn">View all projects →</a>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span class="footer-brand">Denise Ventura</span>
+    <span class="footer-copy">© 2026. All rights reserved</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/denisefventura/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/deniseiferreira" target="_blank">GitHub</a>
+      <a href="mailto:deniseiferreira@gmail.com">Say Hello</a>
+    </div>
+  </footer>
+  <footer class="m-footer">
+    <span class="m-footer-brand">Denise Ventura</span>
+    <span class="m-footer-copy">© 2026. All rights reserved</span>
+  </footer>
+
+</body>
+</html>
