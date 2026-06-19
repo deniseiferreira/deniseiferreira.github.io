@@ -449,7 +449,7 @@
 
 .testem-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -460,7 +460,7 @@
   padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   min-height: 279px;
   justify-content: space-between;
 }
