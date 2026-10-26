@@ -5,11 +5,8 @@
 /* .pen: prob-cards use padding 24, card-num uses DM Sans 14px 600 #1755F4 (garmin uses different style) */
 .prob-card { padding: 24px; }
 .card-num {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
+
   color: #1755F4;
-  letter-spacing: normal;
 }
 
 /* Crably process: tighter item spacing vs other case studies */

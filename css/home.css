@@ -50,11 +50,13 @@
 }
 
 .hero-meta-text {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 12px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
   color: #6F6F6F;
-  letter-spacing: 3px;
+
   text-transform: uppercase;
 }
 
@@ -76,23 +78,24 @@
 }
 
 .ht-line {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 72px;
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
   font-weight: 600;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
   color: #0C1220;
-  letter-spacing: -2px;
-  line-height: 1;
+
 }
 
 .ht-red { color: #E42313; }
 
 .hero-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
   font-weight: 400;
+  line-height: var(--lh-body);
+  max-width: var(--measure);
   color: #6F6F6F;
-  line-height: 1.65;
-  max-width: 675px;
 }
 
 .hero-btns {
@@ -102,9 +105,10 @@
 }
 
 .btn-primary {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
   font-weight: 500;
+  line-height: var(--lh-ui);
   color: #FFFFFF;
   background: #0C1220;
   padding: 14px 28px;
@@ -115,9 +119,10 @@
 .btn-primary:hover { opacity: 0.8; }
 
 .btn-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  font-weight: 500;
+  line-height: var(--lh-ui);
   color: #6F6F6F;
   transition: color 0.2s;
 }
@@ -137,11 +142,13 @@
 .ticker-mobile { display: none; }
 
 .ticker-text {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
   color: rgba(255,255,255,0.53);
-  letter-spacing: 2px;
+
   white-space: nowrap;
 }
 
@@ -161,29 +168,33 @@
 }
 
 .work-tag {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
   color: #D92112;
-  letter-spacing: 2px;
+
   text-transform: uppercase;
 }
 
 .work-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 52px;
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
   font-weight: 800;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-h2);
   color: #0C1220;
-  letter-spacing: -1.3px;
-  line-height: 1.1;
+
 }
 
 .work-lead {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
   font-weight: 400;
+  line-height: var(--lh-body);
+  max-width: var(--measure);
   color: #6B6968;
-  line-height: 1.7;
 }
 
 .work-grid {
@@ -246,48 +257,55 @@
 }
 
 .work-card-year {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-tag);
   color: #6B6968;
-  letter-spacing: 1px;
+
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
 .work-card-tags {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-tag);
   color: #716F6D;
-  letter-spacing: 1px;
 }
 
 .work-card-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 26px;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-h3);
   color: #0C1220;
-  letter-spacing: -0.5px;
-  line-height: 1.15;
+
 }
 
 .work-card-desc {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
   font-weight: 400;
+  line-height: var(--lh-body-sm);
   color: #6B6968;
-  line-height: 1.7;
+
   flex: 1;
 }
 
 .work-card-cta {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  font-weight: 500;
+  line-height: var(--lh-ui);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
+
   color: #FFFFFF;
   background: #0C1220;
   padding: 10px 20px;
@@ -327,29 +345,33 @@
 }
 
 .about-tag {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
   color: #EF4F41;
-  letter-spacing: 2px;
+
   text-transform: uppercase;
 }
 
 .about-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 40px;
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
   font-weight: 800;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-h2);
   color: #FFFFFF;
-  letter-spacing: -1px;
-  line-height: 1.1;
+
 }
 
 .about-bio {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
   font-weight: 400;
+  line-height: var(--lh-body);
+  max-width: var(--measure);
   color: rgba(255,255,255,0.55);
-  line-height: 1.75;
 }
 
 .skills-row {
@@ -359,9 +381,10 @@
 }
 
 .skill-chip {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
   font-weight: 500;
+  line-height: var(--lh-label);
   color: #FFFFFF;
   background: rgba(255,255,255,0.059);
   border: 1px solid rgba(255,255,255,0.125);
@@ -406,18 +429,20 @@
 }
 
 .cap-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: var(--fs-h5);
+  font-weight: 700;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-h4);
   color: #FFFFFF;
 }
 
 .cap-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
   font-weight: 400;
+  line-height: var(--lh-body-sm);
   color: #9E9E9E;
-  line-height: 1.5;
 }
 
 /* ---------- TESTIMONIALS ---------- */
@@ -442,21 +467,24 @@
 }
 
 .testem-tag {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
   color: #716F6D;
-  letter-spacing: 2px;
+
   text-transform: uppercase;
 }
 
 .testem-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 48px;
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
   font-weight: 800;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-h2);
   color: #0C1220;
-  letter-spacing: -1.5px;
-  line-height: 1;
+
 }
 
 .testem-row {
@@ -478,11 +506,12 @@
 }
 
 .testem-quote {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
   font-weight: 400;
+  line-height: var(--lh-body);
   color: #0C1220;
-  line-height: 1.75;
+
   flex: 1;
 }
 
@@ -493,16 +522,19 @@
 }
 
 .testem-name {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 13px;
+  font-family: var(--font-display);
+  font-size: var(--fs-body-sm);
   font-weight: 600;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-h4);
   color: #111110;
 }
 
 .testem-role {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
   font-weight: 400;
+  line-height: var(--lh-label);
   color: #716F6D;
 }
 
@@ -516,11 +548,13 @@
 }
 
 .contact-tag {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
   font-weight: 600;
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
   color: #D92112;
-  letter-spacing: 2px;
+
   text-transform: uppercase;
 }
 
@@ -530,21 +564,23 @@
 }
 
 .contact-h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 64px;
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
   font-weight: 800;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
   color: #0C1220;
-  letter-spacing: -2px;
-  line-height: 1;
+
 }
 
 .contact-h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 64px;
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
   font-weight: 800;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
   color: #E42313;
-  letter-spacing: -2px;
-  line-height: 1;
+
 }
 
 .contact-row {
@@ -554,9 +590,10 @@
 }
 
 .contact-cta {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
   font-weight: 500;
+  line-height: var(--lh-ui);
   color: #FFFFFF;
   background: #E42313;
   padding: 16px 36px;
@@ -567,8 +604,10 @@
 .contact-cta:hover { background: #C21D10; }
 
 .contact-or {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  font-weight: 400;
+  line-height: var(--lh-body-sm);
   color: #716F6D;
 }
 
@@ -579,9 +618,10 @@
 }
 
 .contact-link {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
   font-weight: 500;
+  line-height: var(--lh-ui);
   color: #6B6968;
   transition: color 0.2s;
 }
@@ -604,11 +644,6 @@
     padding: 56px 20px 64px;
   }
 
-  .ht-line {
-    font-size: 38px;
-    letter-spacing: -1px;
-    line-height: 1.05;
-  }
 
   .hero-content { gap: 24px; }
 
@@ -624,13 +659,11 @@
     align-self: center;
   }
   .hero-meta-div { display: none; }
-  .hero-meta-text { font-size: 11px; letter-spacing: 2px; }
   .hero-meta .hero-meta-text:last-child { display: none; }
   .hero-meta-text:first-child::after { content: ' · LISBON, PORTUGAL'; }
   .accent-line { display: none; }
 
   .hero-desc {
-    font-size: 14px;
     max-width: 100%;
   }
 
@@ -648,8 +681,7 @@
   .ticker-mobile .ticker-text {
     white-space: normal;
     text-align: center;
-    line-height: 1.636;
-  }
+}
 
   /* Work */
   .work-sec {
@@ -658,8 +690,6 @@
   }
 
   .work-head { gap: 12px; }
-  .work-title { font-size: 36px; letter-spacing: -1px; }
-  .work-lead  { font-size: 15px; }
 
   .work-grid { gap: 40px; }
 
@@ -680,7 +710,6 @@
   .wc-img-crably   { height: 200px; }
 
   .work-card-body { padding: 24px; gap: 20px; justify-content: flex-start; }
-  .work-card-title { font-size: 20px; }
 
   /* About */
   .about-sec {
@@ -702,7 +731,6 @@
     margin-bottom: 40px;
   }
 
-  .about-title { font-size: 32px; }
 
   .cap-cards {
     grid-template-columns: 1fr;
@@ -717,7 +745,6 @@
     gap: 32px;
   }
 
-  .testem-title { font-size: 32px; letter-spacing: -1px; }
 
   .testem-row {
     grid-template-columns: 1fr;
@@ -737,10 +764,6 @@
   }
 
   .contact-h1,
-  .contact-h2 {
-    font-size: 36px;
-    letter-spacing: -1px;
-  }
 
   .contact-row {
     flex-direction: column;
