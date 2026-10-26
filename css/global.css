@@ -104,6 +104,7 @@ a {
   --ls-tag:     0.06em;   /* small tags and badges */
 
   --measure: 46ch;        /* ≈ 68–74 characters per line in DM Sans (1ch = width of "0") */
+  --measure-wide: 60ch;   /* ≈ 88 characters: wider intro/bio blocks */
 
   --navy:       #0C1220;
   --cream:      #F9F8F5;

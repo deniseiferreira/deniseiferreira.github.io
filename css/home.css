@@ -370,7 +370,7 @@
   font-size: var(--fs-body);
   font-weight: 400;
   line-height: var(--lh-body);
-  max-width: var(--measure);
+  max-width: var(--measure-wide);
   color: rgba(255,255,255,0.55);
 }
 
