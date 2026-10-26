@@ -441,7 +441,7 @@ a {
   max-width: 720px;
 }
 
-.sec-lead-white { color: rgba(255,255,255,0.45); }
+.sec-lead-white { color: rgba(255,255,255,0.55); }
 
 .narrow {
   max-width: 720px;
@@ -652,7 +652,7 @@ img.rf-icon { width: 28px; height: 28px; display: block; flex-shrink: 0; font-si
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.55);
   text-align: center;
   line-height: 1.4;
   max-width: 120px;

@@ -386,11 +386,15 @@
 
 .garmin-ba-row {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  gap: 56px;
 }
 
 .garmin-bw {
   flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -452,8 +456,8 @@
   z-index: 1;
 }
 
-.garmin-pill-before { background: rgba(201, 59, 43, 0.9); }
-.garmin-pill-after  { background: rgba(0, 180, 126, 0.9); }
+.garmin-pill-before { background: #C93B2B; }
+.garmin-pill-after  { background: #00845C; }
 
 .garmin-ba-cap {
   font-family: 'DM Sans', sans-serif;
@@ -675,6 +679,10 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   align-items: flex-end;
+  /* Accessibility: break out of the 960px column so each screenshot is ≥350px wide
+     (at 272px the app's secondary text dropped below 4.5:1 once downscaled) */
+  width: min(1140px, calc(100vw - 96px));
+  align-self: center;
 }
 
 .garmin-phone-wrap {
@@ -881,7 +889,7 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
   .garmin-cb-v2 { flex-direction: column; gap: 24px; }
   .garmin-cb-img-v2 { flex: none; width: 100%; align-self: center; }
 
-  .garmin-phone-row { grid-template-columns: 1fr; gap: 24px; }
+  .garmin-phone-row { grid-template-columns: 1fr; gap: 24px; width: 100%; }
   .garmin-phone-img { border-radius: 28px; }
 
   .garmin-irow { flex-direction: column; gap: 12px; }
@@ -911,6 +919,11 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
   .garmin-screen-title { font-size: 28px; }
 
   .garmin-ba-row { flex-direction: column; }
+  /* Accessibility: side-by-side phones were 165px wide (in-image text ≈6px).
+     Stack Before/After so each screenshot is readable; per-image pills replace the label row. */
+  .garmin-ba-imgs { flex-direction: column; gap: 24px; }
+  .garmin-ba-labels { display: none; }
+  .garmin-ba-pill { display: inline-block; }
 
   .garmin-rf-quote { padding: 24px; }
   .garmin-rf-qtext { font-size: 16px; }
