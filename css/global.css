@@ -545,7 +545,9 @@ a {
   line-height: 1;
   color: #0C1220;
 }
-img.sol-card-icon { width: 28px; height: 28px; display: block; flex-shrink: 0; font-size: unset; }
+/* Icon system: OpenMoji (black), normalised in images/icons — same optical box and stroke (1/20 of the box).
+   Sizes: 24px in cards (solution, reflection, capability), 20px inline in lists. */
+img.sol-card-icon { width: 24px; height: 24px; display: block; flex-shrink: 0; font-size: unset; }
 
 .sol-card-title {
   font-family: 'Space Grotesk', sans-serif;
@@ -582,7 +584,7 @@ img.sol-card-icon { width: 28px; height: 28px; display: block; flex-shrink: 0; f
 }
 
 .rf-icon { font-size: 28px; line-height: 1; color: #0C1220; }
-img.rf-icon { width: 28px; height: 28px; display: block; flex-shrink: 0; font-size: unset; }
+img.rf-icon { width: 24px; height: 24px; display: block; flex-shrink: 0; font-size: unset; }
 
 .rf-title {
   font-family: 'Space Grotesk', sans-serif;

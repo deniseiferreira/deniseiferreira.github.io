@@ -525,7 +525,7 @@
   flex-shrink: 0;
   color: #0C1220;
 }
-img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; font-size: unset; }
+img.garmin-ni-em { width: 20px; height: 20px; display: block; flex-shrink: 0; font-size: unset; }
 
 .garmin-ni-body {
   display: flex;

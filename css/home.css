@@ -399,9 +399,10 @@
 }
 
 .cap-icon {
-  font-size: 20px;
-  color: #E42313;
-  font-family: 'Inter', sans-serif;
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .cap-title {
