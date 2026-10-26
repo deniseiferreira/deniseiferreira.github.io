@@ -48,7 +48,7 @@ a {
   --red:        #E42313;
   --blue:       #1755F4;
   --gray-text:  #6B6968;
-  --gray-meta:  #9D9B99;
+  --gray-meta:  #716F6D;
   --border:     #E3E2DF;
   --green:      #00b47e;
 }
@@ -228,7 +228,7 @@ a {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.5);
 }
 
 .footer-links {
@@ -267,7 +267,7 @@ a {
 .m-footer-copy {
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.5);
 }
 
 /* ---------- CASE STUDY SHARED ---------- */
@@ -321,8 +321,8 @@ a {
 }
 
 .cs-tag-blue   { background: #1755F4; }
-.cs-tag-green  { background: #00b47e; border: 1px solid rgba(255,255,255,0.2); }
-.cs-tag-gray   { background: rgba(193,193,193,0.6); border: 1px solid rgba(255,255,255,0.2); }
+.cs-tag-green  { background: #00845C; border: 1px solid rgba(255,255,255,0.2); }
+.cs-tag-gray   { background: rgba(12,18,32,0.55); border: 1px solid rgba(255,255,255,0.2); }
 
 .cs-hero-title {
   font-family: 'Space Grotesk', sans-serif;
@@ -372,7 +372,7 @@ a {
   font-family: 'DM Sans', sans-serif;
   font-size: 10px;
   font-weight: 600;
-  color: #9D9B99;
+  color: #716F6D;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -477,7 +477,7 @@ a {
   font-family: 'Bricolage Grotesque', 'Space Grotesk', sans-serif;
   font-size: 12px;
   font-weight: 700;
-  color: rgba(23,85,244,0.6);
+  color: #3067F5;
   letter-spacing: 1px;
 }
 
@@ -689,7 +689,7 @@ img.rf-icon { width: 28px; height: 28px; display: block; flex-shrink: 0; font-si
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.5);
   letter-spacing: 3px;
   text-transform: uppercase;
 }

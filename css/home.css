@@ -53,7 +53,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: #7A7A7A;
+  color: #6F6F6F;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -90,7 +90,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #7A7A7A;
+  color: #6F6F6F;
   line-height: 1.65;
   max-width: 675px;
 }
@@ -118,7 +118,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #7A7A7A;
+  color: #6F6F6F;
   transition: color 0.2s;
 }
 
@@ -164,7 +164,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: #E42313;
+  color: #D92112;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -259,7 +259,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: #9D9B99;
+  color: #716F6D;
   letter-spacing: 1px;
 }
 
@@ -330,7 +330,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: #E42313;
+  color: #EF4F41;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -444,7 +444,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: #9D9B99;
+  color: #716F6D;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -502,7 +502,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #9D9B99;
+  color: #716F6D;
 }
 
 /* ---------- CONTACT ---------- */
@@ -518,7 +518,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   font-weight: 600;
-  color: #E42313;
+  color: #D92112;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -560,15 +560,15 @@
   background: #E42313;
   padding: 16px 36px;
   border-radius: 2px;
-  transition: opacity 0.2s;
+  transition: background 0.2s;
 }
 
-.contact-cta:hover { opacity: 0.85; }
+.contact-cta:hover { background: #C21D10; }
 
 .contact-or {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
-  color: #9D9B99;
+  color: #716F6D;
 }
 
 .contact-links {

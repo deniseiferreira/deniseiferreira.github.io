@@ -6,7 +6,7 @@
   background: linear-gradient(
     to bottom,
     rgba(12,18,32,0.05) 0%,
-    rgba(12,18,32,0.30) 40%,
+    rgba(12,18,32,0.40) 40%,
     rgba(12,18,32,0.82) 80%,
     rgba(12,18,32,0.95) 100%
   );
@@ -36,4 +36,18 @@
   .cs-img-row { gap: 16px; }
   .rf-row { row-gap: 20px; }
   .kw-sol-img { height: auto; }
+}
+
+/* Accessibility: on mobile the hero title sits higher on the photo, so the
+   overlay darkens earlier to keep white text ≥3:1 (title) / ≥4.5:1 (subtitle) */
+@media (max-width: 768px) {
+  .kw-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(12,18,32,0.35) 0%,
+      rgba(12,18,32,0.60) 35%,
+      rgba(12,18,32,0.88) 65%,
+      rgba(12,18,32,0.95) 100%
+    );
+  }
 }

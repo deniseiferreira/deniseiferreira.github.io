@@ -98,7 +98,7 @@
 .garmin-screen-cap {
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
-  color: #9D9B99;
+  color: #716F6D;
   text-align: center;
 }
 
@@ -106,7 +106,7 @@
 .cs-caption {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  color: #9D9B99;
+  color: #716F6D;
   text-align: center;
   margin-top: -24px;
 }
@@ -405,7 +405,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: #9D9B99;
+  color: #716F6D;
   letter-spacing: 1px;
 }
 
@@ -458,7 +458,7 @@
 .garmin-ba-cap {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  color: #9D9B99;
+  color: #716F6D;
   text-align: center;
 }
 
@@ -759,7 +759,7 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
   font-family: 'Bricolage Grotesque', 'Space Grotesk', sans-serif;
   font-size: 48px;
   font-weight: 800;
-  color: #1a304d;
+  color: #3A68A4;
   letter-spacing: -2px;
   line-height: 1;
 }
@@ -849,7 +849,7 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
 .garmin-diag-arrow {
   padding-top: 19px;
   flex-shrink: 0;
-  color: #B0ADAB;
+  color: #938F8D;
   font-size: 16px;
 }
 
@@ -951,4 +951,18 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
   .garmin-ph-label { font-size: 9px; letter-spacing: 1.5px; text-align: left; }
   .garmin-ph-title { text-align: left; }
   .garmin-ph-desc  { text-align: left; }
+}
+
+/* Accessibility: on mobile the hero title sits higher on the photo, so the
+   overlay darkens earlier to keep white text ≥3:1 (title) / ≥4.5:1 (subtitle) */
+@media (max-width: 768px) {
+  .garmin-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(12,18,32,0.45) 0%,
+      rgba(12,18,32,0.65) 30%,
+      rgba(12,18,32,0.88) 60%,
+      rgba(12,18,32,0.95) 100%
+    );
+  }
 }
