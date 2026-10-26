@@ -374,24 +374,6 @@
   color: rgba(255,255,255,0.55);
 }
 
-.skills-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-chip {
-  font-family: var(--font-body);
-  font-size: var(--fs-caption);
-  font-weight: 500;
-  line-height: var(--lh-label);
-  color: #FFFFFF;
-  background: rgba(255,255,255,0.059);
-  border: 1px solid rgba(255,255,255,0.125);
-  padding: 8px 16px;
-  border-radius: 100px;
-}
-
 .about-right {
   flex-shrink: 0;
 }
