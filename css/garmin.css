@@ -621,10 +621,14 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
 }
 
 .garmin-cb-img-v2 {
-  flex: 1;
+  flex: 0 1 420px;
+  min-width: 0;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 786 / 1038;
   border-radius: 16px;
-  object-fit: cover;
-  height: 428px;
+  object-fit: contain;
 }
 
 .garmin-spec-cards {
@@ -875,7 +879,7 @@ img.garmin-ni-em { width: 18px; height: 18px; display: block; flex-shrink: 0; fo
   .cs-cont.cs-v-100-80 { padding-top: 64px; padding-bottom: 64px; }
 
   .garmin-cb-v2 { flex-direction: column; gap: 24px; }
-  .garmin-cb-img-v2 { height: auto; object-fit: contain; flex: none; width: 100%; }
+  .garmin-cb-img-v2 { flex: none; width: 100%; align-self: center; }
 
   .garmin-phone-row { grid-template-columns: 1fr; gap: 24px; }
   .garmin-phone-img { border-radius: 28px; }
