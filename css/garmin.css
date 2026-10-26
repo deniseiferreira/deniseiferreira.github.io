@@ -361,8 +361,8 @@
   color: #1755F4;
 }
 
-/* Diagonal arrow: same glyph and circle, rotated 45° clockwise */
-.garmin-arrow-dot--diag { transform: rotate(45deg); }
+/* Rotated arrow: same glyph and circle, turned 90° clockwise (points right) */
+.garmin-arrow-dot--diag { transform: rotate(90deg); }
 
 .garmin-ci-arrow span:last-child {
   font-family: 'DM Sans', sans-serif;
