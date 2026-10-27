@@ -118,12 +118,9 @@
 .hero-inner { gap: clamp(48px, 5vw, 96px); align-items: flex-start; }
 .hero-content { flex: 1; min-width: 0; }
 
-/* Side by side: the text column spans the slide's height, button aligned to the slide's bottom edge
-   (40px = dots row 24px + 16px gap below the slide) */
-@media (min-width: 1101px) {
-  .hero-content { align-self: stretch; padding-bottom: 40px; }
-  .hero-btns { margin-top: auto; }
-}
+/* Title → subtitle 44px, subtitle → button 36px (28px column gap + margins) */
+.hero-subtitle { margin-top: 16px; }
+.hero-btns { margin-top: 8px; }
 .ht-row { flex-wrap: wrap; }
 
 .why {
