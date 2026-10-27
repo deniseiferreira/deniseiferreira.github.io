@@ -695,6 +695,121 @@
   border-radius: 16px;
 }
 
+/* Career timeline (About) — horizontal on desktop, vertical on mobile; rocket at the end */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.tl {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding-block: 8px;
+}
+
+.tl-list {
+  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+/* Line runs through the dots and on into the rocket */
+.tl-list::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  right: -24px;
+  height: 1px;
+  background: rgba(255,255,255,0.18);
+}
+
+.tl-item {
+  position: relative;
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tl-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  margin-bottom: 18px;
+}
+.tl-item-now .tl-dot { background: #E42313; box-shadow: 0 0 0 5px rgba(228,35,19,0.2); }
+
+.tl-year {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: var(--lh-ui);
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.tl-title {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  line-height: var(--lh-label);
+  color: #FFFFFF;
+}
+
+.tl-sub {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-label);
+  color: rgba(255,255,255,0.55);
+}
+
+.tl-rocket {
+  flex-shrink: 0;
+  width: 120px;
+  height: 150px;
+  margin-top: -54px;
+}
+
+.tl-ship  { animation: tl-bob 3.2s ease-in-out infinite; }
+.tl-flame { transform-box: fill-box; transform-origin: 50% 0; animation: tl-flicker 0.22s ease-in-out infinite alternate; }
+.tl-puff  { transform-box: fill-box; transform-origin: center; animation: tl-puff 2.4s ease-in-out infinite; }
+.tl-puff-2 { animation-delay: -0.8s; }
+.tl-puff-3 { animation-delay: -1.6s; }
+.tl-star  { animation: tl-twinkle 2.6s ease-in-out infinite; }
+.tl-star-2 { animation-delay: -0.9s; }
+.tl-star-3 { animation-delay: -1.7s; }
+
+@keyframes tl-bob     { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes tl-flicker { from { transform: scaleY(1); } to { transform: scaleY(0.72); } }
+@keyframes tl-puff    { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.14); } }
+@keyframes tl-twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .tl-ship, .tl-flame, .tl-puff, .tl-star { animation: none; }
+}
+
+@media (max-width: 1100px) {
+  .tl { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .tl-list { grid-template-columns: 1fr; gap: 28px; width: 100%; }
+  .tl-list::before { top: 6px; bottom: -40px; left: 6px; right: auto; width: 1px; height: auto; }
+  .tl-item { align-items: flex-start; text-align: left; padding-left: 36px; }
+  .tl-dot { position: absolute; left: 0; top: 0; margin: 0; }
+  .tl-year { margin-bottom: 6px; }
+  .tl-rocket { width: 72px; height: 90px; margin: 0 0 0 -30px; }
+}
+
 /* Capability Cards */
 .cap-cards {
   display: grid;
