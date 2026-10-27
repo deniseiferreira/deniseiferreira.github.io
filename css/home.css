@@ -391,17 +391,6 @@
 
 .btn-primary:hover { opacity: 0.8; }
 
-.btn-link {
-  font-family: var(--font-body);
-  font-size: var(--fs-body-sm);
-  font-weight: 500;
-  line-height: var(--lh-ui);
-  color: #6F6F6F;
-  transition: color 0.2s;
-}
-
-.btn-link:hover { color: #0C1220; }
-
 /* ---------- TICKER ---------- */
 .ticker {
   background: #0C1220;
