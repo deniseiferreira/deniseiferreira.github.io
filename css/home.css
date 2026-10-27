@@ -178,7 +178,6 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.why-dark .why-muted { color: rgba(255,255,255,0.6); }
 .why-dark .why-red-soft { color: #EF4F41; }
 .why-light .why-red-soft { color: #D92112; }
 
@@ -204,13 +203,6 @@
 .why-light .why-lead { color: #6B6968; font-size: max(13px, calc(34 * var(--u))); }
 .why-mid .why-lead { margin-bottom: calc(68 * var(--u)); }
 
-.why-name {
-  font-family: var(--font-display);
-  font-size: max(13px, calc(32 * var(--u)));
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-}
 .why-url { font-size: max(11px, calc(24 * var(--u))); color: rgba(255,255,255,0.6); }
 
 .why-foot { margin-top: auto; display: flex; flex-direction: column; gap: calc(14 * var(--u)); }
@@ -218,7 +210,7 @@
 .why-swipe { align-self: flex-end; font-size: max(11px, calc(25 * var(--u))); }
 .why-foot-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 12px;
   padding-top: calc(28 * var(--u));
   border-top: 1px solid rgba(255,255,255,0.14);
