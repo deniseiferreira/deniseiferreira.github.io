@@ -847,7 +847,7 @@
   .tl-ship, .tl-flame, .tl-puff, .tl-star { animation: none; }
 }
 
-/* Vertical timeline: most recent first, rocket right under 2025.
+/* Vertical timeline: most recent first, rocket right above 2025.
    The <ol> becomes display: contents so the rocket can sit between its items. */
 @media (max-width: 1100px) {
   .tl { flex-direction: column; align-items: flex-start; gap: 28px; }
@@ -858,8 +858,8 @@
   .tl-year { margin-bottom: 6px; }
   .tl-rocket { position: relative; z-index: 1; width: 72px; height: 90px; margin: 0 0 0 -30px; }
 
-  .tl-item:nth-child(6) { order: 0; }
-  .tl-rocket            { order: 1; }
+  .tl-rocket            { order: 0; }
+  .tl-item:nth-child(6) { order: 1; }
   .tl-item:nth-child(5) { order: 2; }
   .tl-item:nth-child(4) { order: 3; }
   .tl-item:nth-child(3) { order: 4; }
@@ -877,8 +877,16 @@
     background: rgba(255,255,255,0.18);
   }
   .tl-item:nth-child(1)::before { display: none; }
-  /* 2025 runs on through the rocket (2 gaps + rocket height) */
-  .tl-item-now::before { height: calc(100% + 56px + 90px); }
+  /* Short segment from the rocket's smoke down to the 2025 dot */
+  .tl-item-now::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -28px;
+    width: 1px;
+    height: 34px;
+    background: rgba(255,255,255,0.18);
+  }
 }
 
 /* Capability Cards */
@@ -1126,20 +1134,9 @@
   .hero-content { gap: 24px; }
 
   .hero-meta { padding-top: 0; gap: 10px; }
-  .hero-meta::before {
-    content: '';
-    display: inline-block;
-    width: 28px;
-    height: 2px;
-    background: #E42313;
-    border-radius: 1px;
-    flex-shrink: 0;
-    align-self: center;
-  }
   .hero-meta-div { display: none; }
   .hero-meta .hero-meta-text:last-child { display: none; }
   .hero-meta-text:first-child::after { content: ' · LISBON, PORTUGAL'; }
-  .accent-line { display: none; }
 
   .ht-row { flex-direction: column; align-items: flex-start; }
 
