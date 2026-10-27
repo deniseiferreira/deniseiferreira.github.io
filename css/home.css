@@ -218,10 +218,13 @@
   display: flex;
   flex-direction: column;
   min-height: 693px;
+  position: relative;
+  cursor: pointer;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.work-card:hover {
+.work-card:hover,
+.work-card:has(.work-card-cta:focus-visible) {
   box-shadow: 0 8px 32px rgba(12,18,32,0.08);
   transform: translateY(-2px);
 }
@@ -315,6 +318,19 @@
 }
 
 .work-card-cta:hover { opacity: 0.75; }
+
+/* Stretch the case-study link over the whole card */
+.work-card-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+}
+
+.work-card:has(.work-card-cta:focus-visible) {
+  outline: 2px solid #1755F4;
+  outline-offset: 3px;
+}
 
 /* ---------- ABOUT ---------- */
 .about-sec {
