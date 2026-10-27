@@ -813,14 +813,38 @@
   .tl-ship, .tl-flame, .tl-puff, .tl-star { animation: none; }
 }
 
+/* Vertical timeline: most recent first, rocket right under 2025.
+   The <ol> becomes display: contents so the rocket can sit between its items. */
 @media (max-width: 1100px) {
-  .tl { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .tl-list { grid-template-columns: 1fr; gap: 28px; width: 100%; }
-  .tl-list::before { top: 6px; bottom: -40px; left: 6px; right: auto; width: 1px; height: auto; }
+  .tl { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .tl-list { display: contents; }
+  .tl-list::before { display: none; }
   .tl-item { align-items: flex-start; text-align: left; padding-left: 36px; }
-  .tl-dot { position: absolute; left: 0; top: 0; margin: 0; }
+  .tl-dot { position: absolute; left: 0; top: 0; margin: 0; z-index: 1; }
   .tl-year { margin-bottom: 6px; }
-  .tl-rocket { width: 72px; height: 90px; margin: 0 0 0 -30px; }
+  .tl-rocket { position: relative; z-index: 1; width: 72px; height: 90px; margin: 0 0 0 -30px; }
+
+  .tl-item:nth-child(6) { order: 0; }
+  .tl-rocket            { order: 1; }
+  .tl-item:nth-child(5) { order: 2; }
+  .tl-item:nth-child(4) { order: 3; }
+  .tl-item:nth-child(3) { order: 4; }
+  .tl-item:nth-child(2) { order: 5; }
+  .tl-item:nth-child(1) { order: 6; }
+
+  /* Line segment from each dot down to the next one (none below 2008) */
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 1px;
+    height: calc(100% + 28px);
+    background: rgba(255,255,255,0.18);
+  }
+  .tl-item:nth-child(1)::before { display: none; }
+  /* 2025 runs on through the rocket (2 gaps + rocket height) */
+  .tl-item-now::before { height: calc(100% + 56px + 90px); }
 }
 
 /* Capability Cards */
