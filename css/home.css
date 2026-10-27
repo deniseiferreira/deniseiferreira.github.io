@@ -12,11 +12,58 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../images/my_process.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.06;
+  overflow: hidden;
   pointer-events: none;
+  container-type: size;
+}
+
+/* The sketch, sized like background-size: cover so the stage overlays line up with it */
+.hero-art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100cqw, 100cqh * 1408 / 768);
+  aspect-ratio: 1408 / 768;
+  translate: -50% -50%;
+}
+
+.hero-art::before,
+.hero-stage {
+  position: absolute;
+  background-image: url('../images/my_process.png');
+}
+
+.hero-art::before {
+  content: '';
+  inset: 0;
+  background-size: 100% 100%;
+  opacity: 0.06;
+}
+
+/* Each stage is a crop of the same image laid over itself; fading it in darkens
+   just that part of the sketch. Empathy → Create → Design → Prototype → Iterate, 3s each. */
+.hero-stage {
+  left: calc(var(--x) / 1408 * 100%);
+  top: calc(var(--y) / 768 * 100%);
+  width: calc(var(--w) / 1408 * 100%);
+  height: calc(var(--h) / 768 * 100%);
+  background-size: calc(1408 / var(--w) * 100%) calc(768 / var(--h) * 100%);
+  background-position: calc(var(--x) / (1408 - var(--w)) * 100%) calc(var(--y) / (768 - var(--h)) * 100%);
+  /* multiply keeps the paper texture from tinting; the mask feathers the crop's edges */
+  mix-blend-mode: multiply;
+  mask-image: radial-gradient(closest-side, #000 70%, transparent 100%);
+  opacity: 0;
+  animation: hero-stage 15s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 3s);
+}
+
+@keyframes hero-stage {
+  0%, 26%, 100% { opacity: 0; }
+  8%, 18%       { opacity: 0.08; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-stage { animation: none; }
 }
 
 .hero-inner {
