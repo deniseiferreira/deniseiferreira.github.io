@@ -645,6 +645,8 @@
   .hero-meta-text:first-child::after { content: ' · LISBON, PORTUGAL'; }
   .accent-line { display: none; }
 
+  .ht-row { flex-direction: column; align-items: flex-start; }
+
   .hero-desc {
     max-width: 100%;
   }
