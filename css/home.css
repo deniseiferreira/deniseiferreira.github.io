@@ -203,7 +203,6 @@
 .why-light .why-lead { color: #6B6968; font-size: max(13px, calc(34 * var(--u))); }
 .why-mid .why-lead { margin-bottom: calc(68 * var(--u)); }
 
-.why-url { font-size: max(11px, calc(24 * var(--u))); color: rgba(255,255,255,0.6); }
 
 .why-foot { margin-top: auto; display: flex; flex-direction: column; gap: calc(14 * var(--u)); }
 .why-mid + .why-foot { margin-top: 0; }
