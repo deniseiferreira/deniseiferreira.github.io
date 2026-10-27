@@ -351,7 +351,7 @@
 
 .about-inner {
   display: flex;
-  gap: 64px;
+  gap: clamp(64px, 7vw, 96px);
   align-items: center;
 }
 
@@ -400,11 +400,14 @@
 
 .about-right {
   flex-shrink: 0;
+  width: clamp(260px, 30vw, 420px);
 }
 
 .portrait {
-  width: 309px;
-  height: 371px;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 309 / 371;
   object-fit: cover;
   border-radius: 16px;
 }
