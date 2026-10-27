@@ -89,6 +89,28 @@
 
 .ht-red { color: #E42313; }
 
+/* Secondary line under the h1: same voice, a clear step down in size */
+.hero-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.4em;
+  margin-top: -12px;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 0.95rem + 1.1vw, 1.875rem);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-h3);
+  color: #0C1220;
+}
+
+.hero-subtitle span { white-space: nowrap; }
+
+/* #C21D10: 5.8:1 on the cream hero, readable below large-text size on mobile */
+.hero-subtitle em {
+  font-style: normal;
+  color: #C21D10;
+}
+
 .hero-desc {
   font-family: var(--font-body);
   font-size: var(--fs-body);
