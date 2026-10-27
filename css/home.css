@@ -55,7 +55,7 @@
   font-weight: 600;
   line-height: var(--lh-label);
   letter-spacing: var(--ls-label);
-  color: #6F6F6F;
+  color: #5F5D5B; /* ≥ 4.5:1 over the sketch strokes behind it (WCAG 1.4.3) */
 
   text-transform: uppercase;
 }
