@@ -114,7 +114,7 @@
 /* ---------- HERO CAROUSEL ("Why Denise", 5 slides from the PDF) ----------
    Slides are drawn on the PDF's 980 × 1226 grid: --u is one PDF pixel.
    Text sizes have a floor so small type stays readable when the slide is narrow. */
-.hero-inner { gap: clamp(48px, 5vw, 96px); }
+.hero-inner { gap: clamp(48px, 5vw, 96px); align-items: flex-start; }
 .hero-content { flex: 1; min-width: 0; }
 .ht-row { flex-wrap: wrap; }
 
