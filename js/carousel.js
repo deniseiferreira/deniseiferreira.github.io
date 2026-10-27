@@ -26,7 +26,7 @@
   function goTo(i) {
     i = Math.max(0, Math.min(slides.length - 1, i));
     track.scrollTo({
-      left: slides[i].offsetLeft - track.offsetLeft,
+      left: i * track.clientWidth,
       behavior: reduceMotion.matches ? 'auto' : 'smooth'
     });
     setActive(i);
@@ -49,5 +49,15 @@
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
   });
 
-  setActive(0);
+  /* Always open on slide 1: browsers restore the track's scroll position on reload
+     and on back/forward navigation, so reset it after load and when restored from cache. */
+  function reset() {
+    track.scrollTo({ left: 0, behavior: 'auto' });
+    current = -1;
+    setActive(0);
+  }
+
+  reset();
+  window.addEventListener('load', reset);
+  window.addEventListener('pageshow', (e) => { if (e.persisted) reset(); });
 })();
