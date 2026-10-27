@@ -12,58 +12,11 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  container-type: size;
-}
-
-/* The sketch, sized like background-size: cover so the stage overlays line up with it */
-.hero-art {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: max(100cqw, 100cqh * 1408 / 768);
-  aspect-ratio: 1408 / 768;
-  translate: -50% -50%;
-}
-
-.hero-art::before,
-.hero-stage {
-  position: absolute;
   background-image: url('../images/my_process.png');
-}
-
-.hero-art::before {
-  content: '';
-  inset: 0;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   opacity: 0.06;
-}
-
-/* Each stage is a crop of the same image laid over itself; fading it in darkens
-   just that part of the sketch. Empathy → Create → Design → Prototype → Iterate, 3s each. */
-.hero-stage {
-  left: calc(var(--x) / 1408 * 100%);
-  top: calc(var(--y) / 768 * 100%);
-  width: calc(var(--w) / 1408 * 100%);
-  height: calc(var(--h) / 768 * 100%);
-  background-size: calc(1408 / var(--w) * 100%) calc(768 / var(--h) * 100%);
-  background-position: calc(var(--x) / (1408 - var(--w)) * 100%) calc(var(--y) / (768 - var(--h)) * 100%);
-  /* multiply keeps the paper texture from tinting; the mask feathers the crop's edges */
-  mix-blend-mode: multiply;
-  mask-image: radial-gradient(closest-side, #000 70%, transparent 100%);
-  opacity: 0;
-  animation: hero-stage 15s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 3s);
-}
-
-@keyframes hero-stage {
-  0%, 26%, 100% { opacity: 0; }
-  8%, 18%       { opacity: 0.08; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-stage { animation: none; }
+  pointer-events: none;
 }
 
 .hero-inner {
@@ -151,7 +104,11 @@
   color: #0C1220;
 }
 
-.hero-subtitle span { white-space: nowrap; }
+/* Keep each phrase on one line where it fits; let it wrap on very narrow screens
+   and with enlarged text spacing (WCAG 1.4.10 / 1.4.12) */
+@media (min-width: 401px) {
+  .hero-subtitle span { white-space: nowrap; }
+}
 
 .hero-subtitle em {
   font-style: normal;
@@ -360,9 +317,11 @@
 .why-contacts a:hover { text-decoration: underline; }
 .why-contacts + .why-foot { margin-top: 0; }
 
-/* Controls: arrows sit on the slide's left and right edges, dots centred below */
+/* Controls: on desktop the arrows sit on the slide's left and right edges, dots centred below.
+   The arrows are in the pagination row in the HTML; on narrow screens they stay there. */
+.why { position: relative; }
 .why-stage { position: relative; }
-.why-controls { display: flex; justify-content: center; }
+.why-controls { display: flex; justify-content: center; align-items: center; gap: 12px; }
 .why-dots { display: flex; }
 .why-dot {
   width: 24px;
@@ -378,15 +337,18 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #9A9896;
+  /* ≥ 3:1 (WCAG 1.4.11) against the cream hero and the slide's drop shadow below it */
+  background: #767472;
   transition: width 0.25s, background 0.25s, border-radius 0.25s;
 }
 .why-dot[aria-current="true"]::before { width: 20px; border-radius: 4px; background: #E42313; }
 .why-arrow {
   position: absolute;
-  top: 50%;
+  /* centre of the slide: the pagination row (24px) and its 16px gap sit below it */
+  top: calc((100% - 40px) / 2);
   translate: 0 -50%;
   z-index: 2;
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -400,18 +362,25 @@
 }
 .why-arrow[data-dir="-1"] { left: -22px; }
 .why-arrow[data-dir="1"]  { right: -22px; }
-.why-arrow:hover:not(:disabled) { background: #0C1220; border-color: #0C1220; color: #FFFFFF; }
-.why-arrow:disabled { opacity: 0; pointer-events: none; }
+.why-arrow:hover:not([aria-disabled="true"]) { background: #0C1220; border-color: #0C1220; color: #FFFFFF; }
+/* Unavailable at the first/last slide: stays visible and focusable (no opacity), so the focus ring
+   is never lost; dimmed arrow + flat button set it apart from the active state */
+.why-arrow[aria-disabled="true"] {
+  background: #F2F1EE;
+  color: #858381;
+  box-shadow: none;
+  cursor: default;
+}
 
 @media (max-width: 1100px) {
   .hero-inner { flex-direction: column; align-items: flex-start; }
   .why { flex-basis: auto; width: min(100%, 480px); }
 }
 
-/* Keep the arrows inside the screen when the carousel is full width */
+/* Narrow screens: arrows join the pagination row (prev · dots · next) so they never cover slide text */
 @media (max-width: 768px) {
-  .why-arrow[data-dir="-1"] { left: 8px; }
-  .why-arrow[data-dir="1"]  { right: 8px; }
+  .why-controls { justify-content: space-between; }
+  .why-arrow { position: static; translate: none; }
 }
 
 .hero-desc {

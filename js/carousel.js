@@ -19,8 +19,10 @@
       if (n === i) d.setAttribute('aria-current', 'true');
       else d.removeAttribute('aria-current');
     });
-    prev.disabled = i === 0;
-    next.disabled = i === slides.length - 1;
+    /* aria-disabled (not the disabled attribute) keeps the arrow focusable and visible at the
+       first/last slide, so keyboard focus is never left on an invisible control */
+    prev.setAttribute('aria-disabled', String(i === 0));
+    next.setAttribute('aria-disabled', String(i === slides.length - 1));
   }
 
   function goTo(i) {
@@ -40,8 +42,14 @@
     });
   }, { passive: true });
 
-  prev.addEventListener('click', () => goTo(current - 1));
-  next.addEventListener('click', () => goTo(current + 1));
+  function onArrow(btn, dir) {
+    btn.addEventListener('click', () => {
+      if (btn.getAttribute('aria-disabled') === 'true') return;
+      goTo(current + dir);
+    });
+  }
+  onArrow(prev, -1);
+  onArrow(next, 1);
   dots.forEach((d, n) => d.addEventListener('click', () => goTo(n)));
 
   root.addEventListener('keydown', (e) => {

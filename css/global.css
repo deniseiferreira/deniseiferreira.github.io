@@ -48,7 +48,6 @@ body {
   color: #0C1220;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 img {
