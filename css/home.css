@@ -118,9 +118,9 @@
 .hero-inner { gap: clamp(48px, 5vw, 96px); align-items: flex-start; }
 .hero-content { flex: 1; min-width: 0; }
 
-/* Title → subtitle 44px, subtitle → button 36px (28px column gap + margins) */
+/* Title → subtitle and subtitle → button both 44px (28px column gap + 16px) */
 .hero-subtitle { margin-top: 16px; }
-.hero-btns { margin-top: 8px; }
+.hero-btns { margin-top: 16px; }
 .ht-row { flex-wrap: wrap; }
 
 .why {
