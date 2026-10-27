@@ -219,7 +219,6 @@
   flex-direction: column;
   min-height: 693px;
   position: relative;
-  cursor: pointer;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -325,6 +324,12 @@
   position: absolute;
   inset: 0;
   border-radius: 20px;
+}
+
+/* "View project" badge replaces the pointer over the cards (hotspot at its centre) */
+.work-card-cta,
+.work-card-cta::after {
+  cursor: url('../images/cursor-view-project.svg') 48 48, pointer;
 }
 
 .work-card:has(.work-card-cta:focus-visible) {
