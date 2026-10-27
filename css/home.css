@@ -308,8 +308,9 @@
 .why-contacts a:hover { text-decoration: underline; }
 .why-contacts + .why-foot { margin-top: 0; }
 
-/* Controls */
-.why-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+/* Controls: arrows sit on the slide's left and right edges, dots centred below */
+.why-stage { position: relative; }
+.why-controls { display: flex; justify-content: center; }
 .why-dots { display: flex; }
 .why-dot {
   width: 24px;
@@ -329,24 +330,36 @@
   transition: width 0.25s, background 0.25s, border-radius 0.25s;
 }
 .why-dot[aria-current="true"]::before { width: 20px; border-radius: 4px; background: #E42313; }
-.why-arrows { display: flex; gap: 8px; }
 .why-arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid #0C1220;
-  background: transparent;
+  border: 1px solid #E3E2DF;
+  background: #FFFFFF;
   color: #0C1220;
   font-size: 18px;
+  box-shadow: 0 4px 14px rgba(12,18,32,0.18);
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
 }
-.why-arrow:hover:not(:disabled) { background: #0C1220; color: #FFFFFF; }
-.why-arrow:disabled { border-color: #A3A19F; color: #7A7876; cursor: default; }
+.why-arrow[data-dir="-1"] { left: -22px; }
+.why-arrow[data-dir="1"]  { right: -22px; }
+.why-arrow:hover:not(:disabled) { background: #0C1220; border-color: #0C1220; color: #FFFFFF; }
+.why-arrow:disabled { opacity: 0; pointer-events: none; }
 
 @media (max-width: 1100px) {
   .hero-inner { flex-direction: column; align-items: flex-start; }
   .why { flex-basis: auto; width: min(100%, 480px); }
+}
+
+/* Keep the arrows inside the screen when the carousel is full width */
+@media (max-width: 768px) {
+  .why-arrow[data-dir="-1"] { left: 8px; }
+  .why-arrow[data-dir="1"]  { right: 8px; }
 }
 
 .hero-desc {
