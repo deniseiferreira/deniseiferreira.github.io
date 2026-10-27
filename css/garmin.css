@@ -968,7 +968,20 @@ img.garmin-ni-em { width: 20px; height: 20px; display: block; flex-shrink: 0; fo
      Stack Before/After so each screenshot is readable; per-image pills replace the label row. */
   .garmin-ba-imgs { flex-direction: column; gap: 24px; }
   .garmin-ba-labels { display: none; }
-  .garmin-ba-pill { display: inline-block; }
+  /* Per-image labels styled like the desktop label row (grey Before, blue After) */
+  .garmin-ba-pill {
+    display: block;
+    position: static;
+    margin-bottom: 8px;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    font-size: var(--fs-label);
+    font-weight: 600;
+    line-height: var(--lh-label);
+  }
+  .garmin-pill-before { color: #716F6D; }
+  .garmin-pill-after  { color: #1755F4; }
 
   .garmin-rf-quote { padding: 24px; }
 
