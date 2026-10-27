@@ -92,9 +92,10 @@
 /* Secondary line under the h1: same voice, a clear step down in size */
 .hero-subtitle {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 0.4em;
-  margin-top: -12px;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 20px;
+  border-left: 3px solid #E42313;
   font-family: var(--font-display);
   font-size: clamp(1.25rem, 0.95rem + 1.1vw, 1.875rem);
   font-weight: 500;
@@ -116,6 +117,13 @@
    Text sizes have a floor so small type stays readable when the slide is narrow. */
 .hero-inner { gap: clamp(48px, 5vw, 96px); align-items: flex-start; }
 .hero-content { flex: 1; min-width: 0; }
+
+/* Side by side: the text column spans the slide's height, button aligned to the slide's bottom edge
+   (40px = dots row 24px + 16px gap below the slide) */
+@media (min-width: 1101px) {
+  .hero-content { align-self: stretch; padding-bottom: 40px; }
+  .hero-btns { margin-top: auto; }
+}
 .ht-row { flex-wrap: wrap; }
 
 .why {
