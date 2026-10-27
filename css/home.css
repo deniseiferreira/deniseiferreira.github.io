@@ -105,10 +105,9 @@
 
 .hero-subtitle span { white-space: nowrap; }
 
-/* #C21D10: 5.8:1 on the cream hero, readable below large-text size on mobile */
 .hero-subtitle em {
   font-style: normal;
-  color: #C21D10;
+  color: #E42313;
 }
 
 .hero-desc {
