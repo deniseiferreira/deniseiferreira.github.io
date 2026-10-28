@@ -157,7 +157,7 @@ p, li {
 
 .nav-brand {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: #0C1220;
 }
@@ -169,7 +169,7 @@ p, li {
 
 .nav-center a {
   font-family: var(--font-body);
-  font-size: var(--fs-body-sm);
+  font-size: 16px;
   font-weight: 500;
   line-height: var(--lh-ui);
   color: #0C1220;
