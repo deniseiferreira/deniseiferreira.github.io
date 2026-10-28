@@ -425,6 +425,8 @@
   min-height: 44px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 12px 120px;
 }
 
