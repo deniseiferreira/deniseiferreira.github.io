@@ -317,11 +317,10 @@
   transition: background 0.2s;
 }
 .why-cta:hover { background: #C21D10; }
-.why-contacts { text-align: right; }
+.why-contacts { text-align: left; }
 /* Narrow slides (phones): not enough room side by side, so stack them, left-aligned */
 @container (max-width: 440px) {
   .why-bottom { flex-direction: column; align-items: flex-start; }
-  .why-contacts { text-align: left; }
 }
 .why-contacts dt {
   font-size: max(12px, calc(15 * var(--u)));
