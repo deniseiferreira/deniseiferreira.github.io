@@ -921,11 +921,6 @@ img.garmin-ni-em { width: 20px; height: 20px; display: block; flex-shrink: 0; fo
   color: #111110;
 }
 
-/* Garmin outcomes — title/lead match .pen metTitle/metSub sizes */
-.garmin-outcomes-sec .sec-lead {
-  max-width: 560px;
-}
-
 /* ============================================
    MOBILE (max-width: 768px)
    ============================================ */

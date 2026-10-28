@@ -544,18 +544,19 @@ main[tabindex="-1"]:focus { outline: none; }
   font-size: var(--fs-body-lg);
   font-weight: 400;
   line-height: var(--lh-body);
-  max-width: var(--measure);
   color: #6B6968;
 }
 
 .sec-lead-white { color: rgba(255,255,255,0.55); }
 
+/* Section intro: the lead text spans the full content column (.cs-cont);
+   titles keep their previous 720px measure */
 .narrow {
-  max-width: 720px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+.narrow > :not(.sec-lead) { max-width: 720px; }
 
 /* Problem Cards */
 .prob-grid {

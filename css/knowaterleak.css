@@ -19,8 +19,9 @@
   color: #1755F4;
 }
 
-/* Challenge section narrow is wider than standard (847px per .pen vs default 720px) */
-.kw-wide { max-width: 847px; }
+/* Challenge section title is wider than standard (847px per .pen vs default 720px);
+   the lead text spans the full content column like every other section */
+.kw-wide > :not(.sec-lead) { max-width: 847px; }
 
 /* Solution images: fixed height 280px, object-fit contain (mode: fit in .pen) */
 .kw-sol-img {
