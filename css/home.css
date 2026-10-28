@@ -145,6 +145,11 @@
   box-shadow: 0 24px 60px rgba(12,18,32,0.18);
 }
 .why-track::-webkit-scrollbar { display: none; }
+/* Mouse and trackpad: the arrows, dots and arrow keys move the slides, so the track is not a
+   free-scroll area (no extra tab stop needed). Touch keeps native swipe with snapping. */
+@media (hover: hover) and (pointer: fine) {
+  .why-track { overflow-x: hidden; }
+}
 
 .why-slide {
   flex: 0 0 100%;

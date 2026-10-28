@@ -1,4 +1,5 @@
-/* Hero "Why Denise" carousel: native scroll-snap for swipe, buttons and dots for pointer/keyboard. */
+/* Hero "Why Denise" carousel: buttons, dots and arrow keys move the slides; touch keeps native swipe.
+   Only the visible slide is reachable (others are inert); a polite status announces user-driven changes. */
 (function () {
   const root = document.querySelector('.why');
   if (!root) return;
@@ -8,10 +9,25 @@
   const dots = Array.from(root.querySelectorAll('.why-dot'));
   const prev = root.querySelector('.why-arrow[data-dir="-1"]');
   const next = root.querySelector('.why-arrow[data-dir="1"]');
+  const status = document.getElementById('why-status');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = -1;
+  let target = null;   /* slide a button/dot/key is scrolling to; ignore the slides passed on the way */
+  let announceTimer = 0;
+  let targetTimer = 0;
 
-  function setActive(i) {
+  /* One short message after the slide settles, e.g. "Slide 2 of 5: Better products, better ways of working." */
+  function announce(i) {
+    if (!status) return;
+    clearTimeout(announceTimer);
+    announceTimer = setTimeout(() => {
+      const heading = slides[i].querySelector('h2');
+      const title = heading ? ': ' + heading.textContent.replace(/\s+/g, ' ').trim() : '';
+      status.textContent = 'Slide ' + (i + 1) + ' of ' + slides.length + title;
+    }, 400);
+  }
+
+  function setActive(i, speak) {
     if (i === current) return;
     current = i;
     slides.forEach((s, n) => { s.inert = n !== i; });
@@ -23,22 +39,34 @@
        first/last slide, so keyboard focus is never left on an invisible control */
     prev.setAttribute('aria-disabled', String(i === 0));
     next.setAttribute('aria-disabled', String(i === slides.length - 1));
+    if (speak) announce(i);
   }
 
   function goTo(i) {
     i = Math.max(0, Math.min(slides.length - 1, i));
+    if (i !== current) {
+      target = i;
+      /* if the scroll is interrupted (e.g. a swipe mid-way), go back to following the track */
+      clearTimeout(targetTimer);
+      targetTimer = setTimeout(() => { target = null; }, 1000);
+    }
     track.scrollTo({
       left: i * track.clientWidth,
       behavior: reduceMotion.matches ? 'auto' : 'smooth'
     });
-    setActive(i);
+    setActive(i, true);
   }
 
   let raf = 0;
   track.addEventListener('scroll', () => {
     cancelAnimationFrame(raf);
     raf = requestAnimationFrame(() => {
-      setActive(Math.round(track.scrollLeft / track.clientWidth));
+      const i = Math.round(track.scrollLeft / track.clientWidth);
+      if (target !== null) {          /* programmatic scroll: wait until it arrives */
+        if (i === target) target = null;
+        return;
+      }
+      setActive(i, true);             /* touch swipe */
     });
   }, { passive: true });
 
@@ -62,7 +90,8 @@
   function reset() {
     track.scrollTo({ left: 0, behavior: 'auto' });
     current = -1;
-    setActive(0);
+    target = null;
+    setActive(0, false);
   }
 
   reset();
