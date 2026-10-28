@@ -298,9 +298,16 @@
 .why-row p { font-size: max(13px, calc(24 * var(--u))); line-height: 1.4; color: #6B6968; }
 
 /* Slide 5 contact */
+/* Bottom row of the last slide: button on the left, LinkedIn on the right */
+.why-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: max(16px, calc(24 * var(--u))) calc(40 * var(--u));
+}
 .why-cta {
-  align-self: flex-start;
-  margin-top: calc(40 * var(--u));
   padding: calc(26 * var(--u)) calc(90 * var(--u));
   background: #E42313;
   color: #FFFFFF;
@@ -310,7 +317,12 @@
   transition: background 0.2s;
 }
 .why-cta:hover { background: #C21D10; }
-.why-contacts { margin-top: auto; display: flex; flex-wrap: wrap; gap: calc(16 * var(--u)) calc(40 * var(--u)); }
+.why-contacts { text-align: right; }
+/* Narrow slides (phones): not enough room side by side, so stack them, left-aligned */
+@container (max-width: 440px) {
+  .why-bottom { flex-direction: column; align-items: flex-start; }
+  .why-contacts { text-align: left; }
+}
 .why-contacts dt {
   font-size: max(12px, calc(15 * var(--u)));
   font-weight: 700;
@@ -322,7 +334,7 @@
 .why-contacts dd { font-size: max(13px, calc(19 * var(--u))); color: #0C1220; }
 .why-contacts a { color: inherit; }
 .why-contacts a:hover { text-decoration: underline; }
-.why-contacts + .why-foot { margin-top: 0; }
+.why-bottom + .why-foot { margin-top: 0; }
 
 /* Controls: on desktop the arrows sit on the slide's left and right edges, dots centred below.
    The arrows are in the pagination row in the HTML; on narrow screens they stay there. */
