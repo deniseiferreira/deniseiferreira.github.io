@@ -640,8 +640,11 @@
   cursor: url('../images/cursor-view-project.svg') 48 48, pointer;
 }
 
-/* Focus ring goes round the card, not the title */
-.work-card-link:focus-visible { outline: none; }
+/* Focus ring goes round the card, not the title. Only where :has() works; otherwise the
+   title link keeps the default ring from global.css (WCAG 2.4.7). */
+@supports selector(:has(*)) {
+  .work-card-link:focus-visible { outline: none; }
+}
 
 .work-card:has(.work-card-link:focus-visible) {
   outline: 2px solid #1755F4;
@@ -807,14 +810,19 @@
   margin-top: -54px;
 }
 
-.tl-ship  { animation: tl-bob 3.2s ease-in-out infinite; }
-.tl-flame { transform-box: fill-box; transform-origin: 50% 0; animation: tl-flicker 0.22s ease-in-out infinite alternate; }
-.tl-puff  { transform-box: fill-box; transform-origin: center; animation: tl-puff 2.4s ease-in-out infinite; }
-.tl-puff-2 { animation-delay: -0.8s; }
-.tl-puff-3 { animation-delay: -1.6s; }
-.tl-star  { animation: tl-twinkle 2.6s ease-in-out infinite; }
-.tl-star-2 { animation-delay: -0.9s; }
-.tl-star-3 { animation-delay: -1.7s; }
+/* Rocket launch: plays once, for under 5 s, when the timeline scrolls into view
+   (js/timeline.js adds .is-animating). Short, non-looping motion needs no pause control
+   (WCAG 2.2.2); every animation ends on its resting frame. */
+.tl-flame { transform-box: fill-box; transform-origin: 50% 0; }
+.tl-puff  { transform-box: fill-box; transform-origin: center; }
+.tl.is-animating .tl-ship  { animation: tl-bob 2.4s ease-in-out 2; }
+.tl.is-animating .tl-flame { animation: tl-flicker 0.22s ease-in-out 22 alternate; }
+.tl.is-animating .tl-puff  { animation: tl-puff 2.4s ease-in-out 2; }
+.tl.is-animating .tl-puff-2 { animation-delay: -0.8s; }
+.tl.is-animating .tl-puff-3 { animation-delay: -1.6s; }
+.tl.is-animating .tl-star  { animation: tl-twinkle 2.4s ease-in-out 2; }
+.tl.is-animating .tl-star-2 { animation-delay: -0.9s; }
+.tl.is-animating .tl-star-3 { animation-delay: -1.7s; }
 
 @keyframes tl-bob     { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 @keyframes tl-flicker { from { transform: scaleY(1); } to { transform: scaleY(0.72); } }
@@ -822,7 +830,8 @@
 @keyframes tl-twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .tl-ship, .tl-flame, .tl-puff, .tl-star { animation: none; }
+  .tl.is-animating .tl-ship, .tl.is-animating .tl-flame,
+  .tl.is-animating .tl-puff, .tl.is-animating .tl-star { animation: none; }
 }
 
 /* Vertical timeline: most recent first, rocket right above 2025.
@@ -1232,4 +1241,14 @@
     text-align: center;
     padding: 14px;
   }
+}
+
+/* Windows High Contrast / forced colours: the dots are drawn with backgrounds, which the
+   system would remove. Use system colours so controls and the current slide stay visible. */
+@media (forced-colors: active) {
+  .why-dot::before { forced-color-adjust: none; background: ButtonText; }
+  .why-dot[aria-current="true"]::before { background: Highlight; }
+  .why-arrow { border-color: ButtonText; }
+  .why-arrow[aria-disabled="true"] { color: GrayText; border-color: GrayText; }
+  .work-card:has(.work-card-link:focus-visible) { outline-color: Highlight; }
 }
