@@ -922,9 +922,10 @@ img.garmin-ni-em { width: 20px; height: 20px; display: block; flex-shrink: 0; fo
   color: #111110;
 }
 
-/* "A hardware icon with a software crisis" on one line wherever the column allows
-   (from about 769px up); a touch smaller than h2 at its largest so it fits 864px */
-.narrow > .garmin-title-oneline {
+/* Section titles kept on one line wherever the content column allows (from about 769px up):
+   no 720px cap, and a touch smaller than h2 at its largest so the longest fits 864px.
+   They still wrap on phones rather than overflow the column. */
+.sec-title.garmin-title-oneline {
   max-width: none;
   font-size: min(var(--fs-h2), 3.05rem);
 }
