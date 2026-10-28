@@ -1003,3 +1003,62 @@ img.rf-icon { width: 24px; height: 24px; display: block; flex-shrink: 0; font-si
 
   .inner { padding: 0 20px; }
 }
+
+/* ---------- Text descriptions for complex images (WCAG 1.1.1) ----------
+   A collapsible panel right after the image: closed by default so the layout stays the same,
+   reachable in reading order, and opened with Enter/Space or a tap. */
+.img-desc {
+  width: 100%;
+  max-width: 760px;
+  margin-top: 16px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body-sm);
+  color: #0C1220;
+  background: #FFFFFF;
+  border: 1px solid #E3E2DF;
+  border-radius: 8px;
+}
+
+.img-desc summary {
+  min-height: 44px;
+  padding: 12px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.img-desc summary:focus-visible {
+  outline: 2px solid #1755F4;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.img-desc[open] summary { border-bottom: 1px solid #E3E2DF; }
+
+.img-desc-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: var(--measure-wide);
+}
+
+.img-desc-body ul,
+.img-desc-body ol { padding-left: 1.4em; display: flex; flex-direction: column; gap: 4px; }
+.img-desc-body dt { font-weight: 600; }
+.img-desc-body dd { margin-bottom: 8px; }
+
+.img-desc-table { overflow-x: auto; }
+.img-desc-table table { border-collapse: collapse; min-width: 100%; }
+.img-desc-table caption { text-align: left; font-weight: 600; padding-bottom: 8px; }
+.img-desc-table th,
+.img-desc-table td {
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #E3E2DF;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.img-desc-table td:last-child { white-space: normal; min-width: 8em; }
+.img-desc-table thead th { font-size: var(--fs-label); letter-spacing: var(--ls-tag); text-transform: uppercase; color: #5F5D5B; }

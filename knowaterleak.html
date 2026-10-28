@@ -116,7 +116,18 @@
         <p class="sec-lead">Municipalities managing aging water infrastructure faced a critical gap: risk maps showed where pipes were, but not why they were at risk. Maintenance decisions relied on manual layer toggling, slow, error-prone, and invisible to field teams.</p>
       </div>
 
-      <img src="images/knowaterleak/knowaterleak_before.png" alt="Before redesign" class="cs-img">
+      <img src="images/knowaterleak/knowaterleak_before.png" alt="Map viewer before the redesign: pipes drawn as one uniform blue layer, with a separate leak-risk layer of grid cells coloured from green (low) to red (high). Text description below." class="cs-img">
+      <details class="img-desc">
+        <summary>Text description: map before the redesign</summary>
+        <div class="img-desc-body">
+          <p>Screenshot of the Tenchijin Compass map viewer before the redesign. Two overlay layers are switched on in the side panel:</p>
+          <ul>
+            <li><strong><span lang="ja">配水管</span> (distribution pipes):</strong> every pipe is drawn as the same thin blue line, with no information about its age or size.</li>
+            <li><strong><span lang="ja">漏水リスク</span> (leak risk):</strong> square grid cells coloured on a scale from Low Risk (green) to High Risk (red).</li>
+          </ul>
+          <p>The two layers are listed separately in the panel, each with its own opacity slider. A map style picker and a 500 m scale bar are also shown.</p>
+        </div>
+      </details>
 
       <div class="prob-row">
         <div class="prob-card">
@@ -183,9 +194,44 @@
       </div>
 
       <div class="cs-img-row">
-        <img src="images/knowaterleak/Pipes_1.webp" alt="Pipe age colour encoding" class="cs-img kw-sol-img">
-        <img src="images/knowaterleak/Pipes_2.webp" alt="Pipe diameter thickness encoding" class="cs-img kw-sol-img">
+        <img src="images/knowaterleak/Pipes_1.webp" alt="Redesigned pipe layer: each pipe coloured by installation year and drawn thicker for larger diameters." class="cs-img kw-sol-img">
+        <img src="images/knowaterleak/Pipes_2.webp" alt="The same pipe layer combined with the leak-risk grid on one map. Text description below." class="cs-img kw-sol-img">
       </div>
+      <details class="img-desc">
+        <summary>Text description: pipe age and diameter legend</summary>
+        <div class="img-desc-body">
+          <p>Two screenshots of the redesigned water-pipe layer, <span lang="ja">水道管</span> (water pipes), in the Tenchijin Compass map viewer. The first shows the pipe layer alone; the second shows it together with the leak-risk grid (<span lang="ja">漏水リスク</span>, green for low risk to red for high risk).</p>
+          <p>The pipe layer encodes two attributes at once:</p>
+          <div class="img-desc-table" role="region" aria-label="Pipe installation year legend" tabindex="0">
+            <table>
+              <caption>Line colour: installation year</caption>
+              <thead><tr><th scope="col">Legend label</th><th scope="col">Meaning</th><th scope="col">Colour</th></tr></thead>
+              <tbody>
+                <tr><td lang="ja">データなし</td><td>No data</td><td>Grey</td></tr>
+                <tr><td lang="ja">1959年以前</td><td>1959 or earlier</td><td>Darkest blue</td></tr>
+                <tr><td lang="ja">1960〜1979年</td><td>1960–1979</td><td rowspan="3">Progressively lighter blues</td></tr>
+                <tr><td lang="ja">1980〜1999年</td><td>1980–1999</td></tr>
+                <tr><td lang="ja">2000〜2019年</td><td>2000–2019</td></tr>
+                <tr><td lang="ja">2020年以降</td><td>2020 or later</td><td>Lightest blue-green</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="img-desc-table" role="region" aria-label="Pipe diameter legend" tabindex="0">
+            <table>
+              <caption>Line thickness: pipe diameter</caption>
+              <thead><tr><th scope="col">Legend label</th><th scope="col">Meaning</th><th scope="col">Line</th></tr></thead>
+              <tbody>
+                <tr><td lang="ja">データなし</td><td>No data</td><td>Dashed</td></tr>
+                <tr><td lang="ja">20mm未満</td><td>Under 20 mm</td><td>Thinnest</td></tr>
+                <tr><td lang="ja">20〜99mm</td><td>20–99 mm</td><td rowspan="3">Progressively thicker</td></tr>
+                <tr><td lang="ja">100〜299mm</td><td>100–299 mm</td></tr>
+                <tr><td lang="ja">300〜599mm</td><td>300–599 mm</td></tr>
+                <tr><td lang="ja">600mm以上</td><td>600 mm or more</td><td>Thickest</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
 
       <div class="sol-row">
         <div class="sol-card">

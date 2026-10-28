@@ -171,19 +171,19 @@
       </div>
       <div class="garmin-shot-row">
         <div class="garmin-shot-col">
-          <img src="images/garmin/original_home.png" alt="Garmin Connect home screen" class="garmin-shot-img">
+          <img src="images/garmin/original_home.png" alt="Original Garmin Connect home: an In Focus Sleep Score card (79, Fair, 7h 2m) with a stage chart, above At a Glance tiles for heart rate and stress." class="garmin-shot-img">
           <p class="garmin-screen-cap">Home: data dump</p>
         </div>
         <div class="garmin-shot-col">
-          <img src="images/garmin/2SleepScore3.PNG" alt="Garmin sleep score" class="garmin-shot-img">
+          <img src="images/garmin/2SleepScore3.PNG" alt="Original Sleep Score screen: a timeline of deep, light, REM and awake sleep drawn in similar blue and pink shades." class="garmin-shot-img">
           <p class="garmin-screen-cap">Sleep: ambiguous colours</p>
         </div>
         <div class="garmin-shot-col">
-          <img src="images/garmin/original_activities.png" alt="Garmin activities list" class="garmin-shot-img">
+          <img src="images/garmin/original_activities.png" alt="Original Profile screen: followers and badges, with the list of past activities below them." class="garmin-shot-img">
           <p class="garmin-screen-cap">Activities: unintuitive path</p>
         </div>
         <div class="garmin-shot-col">
-          <img src="images/garmin/2SleepScore6.PNG" alt="Garmin body battery" class="garmin-shot-img">
+          <img src="images/garmin/2SleepScore6.PNG" alt="Original Sleep Score timeline with the Body Battery line drawn over the sleep stages." class="garmin-shot-img">
           <p class="garmin-screen-cap">Body Battery: buried in data</p>
         </div>
       </div>
@@ -331,8 +331,8 @@
           </div>
         </div>
         <div class="garmin-screens-row garmin-home-imgs">
-          <img src="images/garmin/home_redesign.png" alt="Garmin home redesign" class="garmin-redesign-img">
-          <img src="images/garmin/home_redesign_scrolled.png" alt="Garmin home scrolled" class="garmin-redesign-img">
+          <img src="images/garmin/home_redesign.png" alt="Redesigned home: “Beat yesterday. Body battery at 72%. Good window for a run.” with a Ready to train chip, Sleep Score 79 (Fair) with stage durations, and At a Glance rings for HRV (41 ms) and Body Battery (72%)." class="garmin-redesign-img">
+          <img src="images/garmin/home_redesign_scrolled.png" alt="Redesigned home, scrolled: the Consistency Bar card and the most recent activity, a walk." class="garmin-redesign-img">
         </div>
       </div>
     </div>
@@ -347,10 +347,10 @@
           <p class="sec-tag">Habit Formation Feature</p>
         </div>
         <h2 class="sec-title">Consistency Bar</h2>
-        <p class="sec-lead">Inspired by Seinfeld's 'don't break the chain' method. Each health pillar (Sleep, Activity, Stress and Steps) gets its own 14-day bar chain filled in its signature colour. The hero number counts consecutive days all four pillars were on track simultaneously.</p>
+        <p class="sec-lead">Inspired by Seinfeld's 'don't break the chain' method. Each health pillar (Sleep, Activity, Stress and Steps) gets its own 14-day bar chain filled in its signature colour. The hero number counts the days in the last 14 when all four pillars were on track simultaneously.</p>
       </div>
       <div class="garmin-cb-v2">
-        <img src="images/garmin/consistency_bar.png" alt="Consistency Bar component" class="garmin-cb-img-v2">
+        <img src="images/garmin/consistency_bar.png" alt="Consistency Bar card: 6 of the last 14 days with all four pillars on track; Sleep 9 days, Activity 11, Stress 10, Steps 8. Text description below." class="garmin-cb-img-v2">
         <div class="garmin-spec-cards">
           <div class="garmin-spec-card">
             <p class="garmin-spec-label">Chain mechanic</p>
@@ -361,8 +361,8 @@
             <p class="garmin-spec-desc">Counts only days when all 4 pillars are on track simultaneously, the true consistency signal.</p>
           </div>
           <div class="garmin-spec-card">
-            <p class="garmin-spec-label">Per-pillar streaks</p>
-            <p class="garmin-spec-desc">Each pillar shows its own streak badge to pinpoint the weakest link (e.g. Sleep 9d, Stress 6d).</p>
+            <p class="garmin-spec-label">Per-pillar totals</p>
+            <p class="garmin-spec-desc">Each pillar shows a badge with how many of the last 14 days met its goal, pinpointing the weakest link (e.g. Steps 8d, Activity 11d).</p>
           </div>
           <div class="garmin-spec-card">
             <p class="garmin-spec-label">CTA</p>
@@ -370,6 +370,25 @@
           </div>
         </div>
       </div>
+      <details class="img-desc">
+        <summary>Text description: Consistency Bar</summary>
+        <div class="img-desc-body">
+          <p>The card covers 14 days, from 25 April to today, and is marked “All on track”. Its headline reads 6: the number of days on which all four pillars met their goal. Each day is shown as goal met, partial or missed; today is still open.</p>
+          <div class="img-desc-table" role="region" aria-label="Consistency Bar data" tabindex="0">
+            <table>
+              <caption>Daily status per pillar, oldest day first. ✓ goal met, ½ partial, – missed, ○ today (open).</caption>
+              <thead><tr><th scope="col">Pillar</th><th scope="col">Days 1 to 13</th><th scope="col">Today</th><th scope="col">Days goal met</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Sleep</th><td>– – ½ ✓ ✓ – ✓ ✓ ✓ ✓ ✓ ✓ ✓</td><td>○</td><td>9</td></tr>
+                <tr><th scope="row">Activity</th><td>– ½ ✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓ ✓</td><td>○</td><td>11</td></tr>
+                <tr><th scope="row">Stress</th><td>– ✓ ✓ – ✓ ✓ ✓ – ✓ ✓ ✓ ✓ ✓</td><td>○</td><td>10</td></tr>
+                <tr><th scope="row">Steps</th><td>– ✓ – ½ – – ✓ ✓ ✓ ✓ ✓ ✓ ✓</td><td>○</td><td>8</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>All four pillars meet their goal on day 7 and on days 9 to 13, which gives the headline of 6. Below the chart, a prompt reads “Don't break the chain: Log today's activity to keep your streak”.</p>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -390,29 +409,29 @@
       <div class="garmin-phone-grid">
         <div class="garmin-phone-row">
           <div class="garmin-phone-wrap">
-            <img src="images/garmin/sleep-details.png" alt="Sleep Details" class="garmin-phone-img">
+            <img src="images/garmin/sleep-details.png" alt="Sleep Details, 1 day: “You slept well. Deep sleep was strong, a good sign for recovery today.” Score 79/100 (Fair), 7h 2m, bed 11:04 pm, wake 6:06 am, with a Sleep Overview chart of stages and heart rate." class="garmin-phone-img">
             <p class="garmin-phone-cap">Sleep Details</p>
           </div>
           <div class="garmin-phone-wrap">
-            <img src="images/garmin/Sleep_Details_Scrolled.png" alt="Sleep Details scrolled" class="garmin-phone-img">
+            <img src="images/garmin/Sleep_Details_Scrolled.png" alt="Stage Breakdown: Deep 1h 12m (Fair), Light 3h 58m (Fair), REM 1h 48m (Excellent), Awake 4m (Fair), Duration 7h 2m (Good), Stress 17 average (Fair)." class="garmin-phone-img">
             <p class="garmin-phone-cap">Sleep Details scrolled</p>
           </div>
           <div class="garmin-phone-wrap">
-            <img src="images/garmin/Sleep_Details_While_You_Slept.png" alt="While You Slept" class="garmin-phone-img">
+            <img src="images/garmin/Sleep_Details_While_You_Slept.png" alt="While You Slept: Body Battery +48, 27 restless moments, overnight HRV 43 ms, 7-day HRV Balanced, resting HR 47 bpm, blood oxygen 97%, respiration 14 brpm average and 10 low. Sleep Insight: “Your deep sleep was above your weekly average. Keep a consistent bedtime to protect that pattern.”" class="garmin-phone-img">
             <p class="garmin-phone-cap">While You Slept</p>
           </div>
         </div>
         <div class="garmin-phone-row">
           <div class="garmin-phone-wrap">
-            <img src="images/garmin/Sleep_Details_7d.png" alt="7-day comparative" class="garmin-phone-img">
+            <img src="images/garmin/Sleep_Details_7d.png" alt="Sleep Details, 7 days (2–8 May): “Strong week. You averaged 86/100. Thursday was your best night.” Average 86 (Good), 7h 29m over 7 nights, with a line chart of nightly Sleep Score and Body Battery." class="garmin-phone-img">
             <p class="garmin-phone-cap">7-day comparative</p>
           </div>
           <div class="garmin-phone-wrap">
-            <img src="images/garmin/Sleep_Details_7d_Scrolled.png" alt="7-day scrolled" class="garmin-phone-img">
+            <img src="images/garmin/Sleep_Details_7d_Scrolled.png" alt="7-day averages (score 86, Body Battery +63, resting HR 48 bpm, respiration 15 brpm) and a Sleep Duration bar chart against an 8-hour goal, met on 7 May." class="garmin-phone-img">
             <p class="garmin-phone-cap">7-day scrolled</p>
           </div>
           <div class="garmin-phone-wrap">
-            <img src="images/garmin/Sleep_Details_7d_Log.png" alt="Sleep log &amp; history" class="garmin-phone-img">
+            <img src="images/garmin/Sleep_Details_7d_Log.png" alt="Sleep Consistency chart of bedtime and wake time per night (average bedtime 00:38, wake 08:19) and a Daily Log: Friday 8 May 79 (Fair) 7h 2m, Thursday 7 May 95 (Excellent) 8h 22m, Wednesday 88, 7h 42m." class="garmin-phone-img">
             <p class="garmin-phone-cap">Sleep log &amp; history</p>
           </div>
         </div>
@@ -430,9 +449,28 @@
           <p class="garmin-screen-body">All quality ratings follow the same colour progression: yellow for Fair, lime for Good, green for Excellent. Applied consistently across the Sleep Score Scale and Training Readiness chip states so users never need to re-learn the scale when switching context.</p>
         </div>
         <div class="garmin-tr-img-row">
-          <img src="images/garmin/sleep_score_scale.png" alt="Sleep score scale" class="garmin-tr-img garmin-tr-img-sleep">
-          <img src="images/garmin/training_readiness.png" alt="Training readiness" class="garmin-tr-img garmin-tr-img-tr">
+          <img src="images/garmin/sleep_score_scale.png" alt="Sleep Score Scale: Poor 0–59 (red), Fair 60–79 (yellow), Good 80–89 (lime), Excellent 90–100 (green), with a marker at 79." class="garmin-tr-img garmin-tr-img-sleep">
+          <img src="images/garmin/training_readiness.png" alt="Training Readiness chip states: Rest needed, Train light, Good to train and Ready to train. Text description below." class="garmin-tr-img garmin-tr-img-tr">
         </div>
+        <details class="img-desc">
+          <summary>Text description: Sleep Score Scale and Training Readiness chips</summary>
+          <div class="img-desc-body">
+            <p><strong>Sleep Score Scale.</strong> Four bands from 0 to 100, with a marker at 79, inside the Fair band:</p>
+            <ul>
+              <li>Poor, 0–59 (red)</li>
+              <li>Fair, 60–79 (yellow)</li>
+              <li>Good, 80–89 (lime)</li>
+              <li>Excellent, 90–100 (green)</li>
+            </ul>
+            <p><strong>Training Readiness chip states.</strong> The chip in the Morning Banner adapts to the user's recovery state:</p>
+            <dl>
+              <dt>Rest needed (red)</dt><dd>High fatigue, low HRV. Recovery is the priority.</dd>
+              <dt>Train light (yellow)</dt><dd>Moderate readiness. Low intensity activity recommended.</dd>
+              <dt>Good to train (lime)</dt><dd>Solid readiness. Moderate to hard sessions are fine.</dd>
+              <dt>Ready to train (green)</dt><dd>Peak readiness. Push hard, body is primed to perform.</dd>
+            </dl>
+          </div>
+        </details>
       </div>
     </div>
   </div>
@@ -469,8 +507,8 @@
           </div>
         </div>
         <div class="garmin-act-imgs">
-          <img src="images/garmin/All_Activities.png" alt="All Activities screen" class="garmin-act-img">
-          <img src="images/garmin/profile_redesign.png" alt="Profile redesign" class="garmin-act-img">
+          <img src="images/garmin/All_Activities.png" alt="Redesigned All Activities: a feed grouped by date; each card shows the activity, start time, duration, pace or heart rate, and distance, with walks, runs and a cardio session listed by date." class="garmin-act-img">
+          <img src="images/garmin/profile_redesign.png" alt="Redesigned Profile: badges for Running, Walking, Cardio, Sleep and Goal, followed by the same All Activities list." class="garmin-act-img">
         </div>
       </div>
     </div>
@@ -486,8 +524,8 @@
           <p class="garmin-screen-body">The activity detail screen is restructured around the post-workout ritual, first the headline metrics (time, distance, pace), then the heart rate story, then the technical breakdown. The route map is surfaced at the top for GPS activities.</p>
         </div>
         <div class="garmin-screens-row garmin-detail-imgs">
-          <img src="images/garmin/activity_detail.png" alt="Activity detail screen" class="garmin-redesign-img">
-          <img src="images/garmin/activity_metrics.png" alt="Activity key metrics" class="garmin-redesign-img">
+          <img src="images/garmin/activity_detail.png" alt="Redesigned activity detail for a run: “Strong aerobic effort. Consistent pace throughout.” 5.21 km, a route map coloured from slower to faster, and Key Metrics." class="garmin-redesign-img">
+          <img src="images/garmin/activity_metrics.png" alt="Key Metrics: average heart rate 128 bpm, average pace 6:11 /km, total time 32:15, 318 calories, an Activity Insight, and links to Personal Records, All Running Activities and Running Reports." class="garmin-redesign-img">
         </div>
         <p class="cs-caption">Activity detail (left) and key metrics breakdown (right)</p>
       </div>
@@ -516,11 +554,11 @@
             <div class="garmin-ba-imgs">
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-before">Before</span>
-                <img src="images/garmin/original_home.png" alt="Original home" class="garmin-ba-img">
+                <img src="images/garmin/original_home.png" alt="Original Garmin Connect home screen" class="garmin-ba-img">
               </div>
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-after">After</span>
-                <img src="images/garmin/home_redesign.png" alt="Redesigned home" class="garmin-ba-img">
+                <img src="images/garmin/home_redesign.png" alt="Redesigned home screen" class="garmin-ba-img">
               </div>
             </div>
             <p class="garmin-ba-cap">Home Screen: Adding morning narrative context</p>
@@ -534,11 +572,11 @@
             <div class="garmin-ba-imgs">
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-before">Before</span>
-                <img src="images/garmin/original_sleep.png" alt="Original sleep" class="garmin-ba-img">
+                <img src="images/garmin/original_sleep.png" alt="Original Sleep Score screen" class="garmin-ba-img">
               </div>
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-after">After</span>
-                <img src="images/garmin/sleep-details.png" alt="Redesigned sleep" class="garmin-ba-img">
+                <img src="images/garmin/sleep-details.png" alt="Redesigned Sleep Details screen" class="garmin-ba-img">
               </div>
             </div>
             <p class="garmin-ba-cap">Sleep Details: Narrative summary + accessible colour system</p>
@@ -556,11 +594,11 @@
             <div class="garmin-ba-imgs">
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-before">Before</span>
-                <img src="images/garmin/5ActivityHistory6.jpeg" alt="Original activities" class="garmin-ba-img">
+                <img src="images/garmin/5ActivityHistory6.jpeg" alt="Original All Activities list" class="garmin-ba-img">
               </div>
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-after">After</span>
-                <img src="images/garmin/All_Activities.png" alt="Redesigned activities" class="garmin-ba-img">
+                <img src="images/garmin/All_Activities.png" alt="Redesigned All Activities screen" class="garmin-ba-img">
               </div>
             </div>
             <p class="garmin-ba-cap">Activities: Unified history vs. type categorisation</p>
@@ -574,11 +612,11 @@
             <div class="garmin-ba-imgs">
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-before">Before</span>
-                <img src="images/garmin/original_activity_detail.jpg" alt="Original activity detail" class="garmin-ba-img">
+                <img src="images/garmin/original_activity_detail.jpg" alt="Original running activity detail screen" class="garmin-ba-img">
               </div>
               <div class="garmin-ba-panel">
                 <span class="garmin-ba-pill garmin-pill-after">After</span>
-                <img src="images/garmin/activity_detail.png" alt="Redesigned activity detail" class="garmin-ba-img">
+                <img src="images/garmin/activity_detail.png" alt="Redesigned activity detail screen" class="garmin-ba-img">
               </div>
             </div>
             <p class="garmin-ba-cap">Activity Detail: Structured debrief hierarchy</p>
