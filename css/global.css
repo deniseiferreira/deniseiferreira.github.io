@@ -243,25 +243,7 @@ p, li {
   transition: transform 0.28s ease, opacity 0.28s ease;
 }
 
-/* ---- Skip link: first focusable element, shown on keyboard focus ---- */
-.skip-link {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  z-index: 200;
-  padding: 12px 18px;
-  background: #0C1220;
-  color: #FFFFFF;
-  font-family: var(--font-body);
-  font-size: var(--fs-body-sm);
-  font-weight: 600;
-  line-height: var(--lh-ui);
-  border-radius: 4px;
-  transform: translateY(calc(-100% - 16px));
-}
-.skip-link:focus { transform: none; }
-
-/* Skip target: focusable only by script/link (tabindex="-1"), no ring around the whole page */
+/* <main tabindex="-1">: no focus ring around the whole page if it receives focus (e.g. via #main-content) */
 main[tabindex="-1"]:focus { outline: none; }
 
 /* Mobile menu panel */
