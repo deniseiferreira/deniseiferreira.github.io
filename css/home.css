@@ -1019,6 +1019,8 @@
   padding: 100px 120px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 40px;
 }
 
@@ -1036,6 +1038,7 @@
 .contact-headline {
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow-wrap: break-word;
 }
 
@@ -1061,7 +1064,9 @@
 
 .contact-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -1231,11 +1236,10 @@
     gap: 32px;
   }
 
-  .contact-h1,
-
   .contact-row {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    align-self: stretch;   /* keeps the full-width "Get in touch" button on mobile */
   }
 
   .contact-cta {
