@@ -211,7 +211,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 720px;
 }
 
 .garmin-eyebrow {
@@ -241,7 +240,6 @@
   font-size: var(--fs-body);
   font-weight: 400;
   line-height: var(--lh-body);
-  max-width: var(--measure);
   color: #6B6968;
 }
 
