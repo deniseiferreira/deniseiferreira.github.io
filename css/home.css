@@ -1225,6 +1225,9 @@
 
   .cap-card { height: auto; }
 
+  /* Timeline: inset so the rocket (which overhangs the line to the left) stays on screen */
+  .tl { padding-left: 28px; padding-block: 16px; }
+
   /* Testimonials */
   .testem-sec {
     padding: 72px 20px;
