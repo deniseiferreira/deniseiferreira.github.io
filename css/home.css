@@ -1045,6 +1045,8 @@
   color: #D92112;
 
   text-transform: uppercase;
+  align-self: flex-start;
+  text-align: left;
 }
 
 .contact-headline {
