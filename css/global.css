@@ -181,7 +181,7 @@ p, li {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 40px;
 }
 
 .btn-hello {
