@@ -41,14 +41,15 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/home.css">
   <script defer src="js/carousel.js"></script>
+  <script defer src="js/menu.js"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="740c7a55-43b6-4b2c-aded-6cbcceb98bc6"></script>
 </head>
 <body>
 
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Menu">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Desktop Nav -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <a href="index.html" class="nav-brand">Denise Ventura</a>
     <div class="nav-center">
       <a href="#work">Work</a>
@@ -60,22 +61,24 @@
   </nav>
 
   <!-- Mobile Nav -->
-  <nav class="m-nav">
+  <header class="m-nav">
     <a href="index.html" class="m-nav-brand">Denise Ventura</a>
-    <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+    <button type="button" class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="m-menu">
       <span></span><span></span><span></span>
-    </label>
-  </nav>
+    </button>
+  </header>
 
-  <label class="m-menu-overlay" for="menu-toggle" aria-hidden="true"></label>
+  <div class="m-menu-overlay" aria-hidden="true"></div>
 
-  <div class="m-menu" role="navigation" aria-label="Mobile navigation">
+  <nav class="m-menu" id="m-menu" aria-label="Main">
     <a href="#work" class="m-menu-link">Work</a>
     <a href="#about" class="m-menu-link">About</a>
     <div class="m-menu-cta">
       <a href="mailto:hey@deniseventura.design" class="m-menu-btn">Say Hello!</a>
     </div>
-  </div>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
 
   <!-- ========== HERO ========== -->
   <section class="hero-area">
@@ -464,6 +467,8 @@ Denise provided clear and relevant guidelines to front-end engineers. As a resul
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
