@@ -1,14 +1,11 @@
-/* Career timeline: start the rocket's short launch animation once, when it scrolls into view.
-   The animation lasts under 5 s and doesn't loop; reduced-motion users get none (see home.css). */
+/* Career timeline: the rocket animates while the About section is on screen and stops when
+   it leaves. Reduced-motion users get no animation (see home.css). */
 (function () {
   const tl = document.querySelector('.tl');
-  if (!tl || !('IntersectionObserver' in window)) return;
+  const about = document.getElementById('about');
+  if (!tl || !about || !('IntersectionObserver' in window)) return;
 
-  const io = new IntersectionObserver((entries) => {
-    if (entries.some((e) => e.isIntersecting)) {
-      tl.classList.add('is-animating');
-      io.disconnect();
-    }
-  }, { threshold: 0.4 });
-  io.observe(tl);
+  new IntersectionObserver((entries) => {
+    tl.classList.toggle('is-animating', entries[entries.length - 1].isIntersecting);
+  }).observe(about);
 })();

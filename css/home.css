@@ -823,17 +823,17 @@
   margin-top: -54px;
 }
 
-/* Rocket launch: plays once, for under 5 s, when the timeline scrolls into view
-   (js/timeline.js adds .is-animating). Short, non-looping motion needs no pause control
-   (WCAG 2.2.2); every animation ends on its resting frame. */
+/* Rocket: animates continuously while the About section is on screen
+   (js/timeline.js toggles .is-animating); stops when the section leaves the screen.
+   Reduced-motion users see it still (below). */
 .tl-flame { transform-box: fill-box; transform-origin: 50% 0; }
 .tl-puff  { transform-box: fill-box; transform-origin: center; }
-.tl.is-animating .tl-ship  { animation: tl-bob 2.4s ease-in-out 2; }
-.tl.is-animating .tl-flame { animation: tl-flicker 0.22s ease-in-out 22 alternate; }
-.tl.is-animating .tl-puff  { animation: tl-puff 2.4s ease-in-out 2; }
+.tl.is-animating .tl-ship  { animation: tl-bob 3.2s ease-in-out infinite; }
+.tl.is-animating .tl-flame { animation: tl-flicker 0.22s ease-in-out infinite alternate; }
+.tl.is-animating .tl-puff  { animation: tl-puff 2.4s ease-in-out infinite; }
 .tl.is-animating .tl-puff-2 { animation-delay: -0.8s; }
 .tl.is-animating .tl-puff-3 { animation-delay: -1.6s; }
-.tl.is-animating .tl-star  { animation: tl-twinkle 2.4s ease-in-out 2; }
+.tl.is-animating .tl-star  { animation: tl-twinkle 2.6s ease-in-out infinite; }
 .tl.is-animating .tl-star-2 { animation-delay: -0.9s; }
 .tl.is-animating .tl-star-3 { animation-delay: -1.7s; }
 
