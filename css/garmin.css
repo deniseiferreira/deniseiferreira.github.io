@@ -332,7 +332,6 @@
   font-size: var(--fs-body);
   font-weight: 400;
   line-height: var(--lh-body);
-  max-width: var(--measure);
   color: #6B6968;
 }
 
