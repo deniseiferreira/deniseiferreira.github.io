@@ -516,15 +516,28 @@ main[tabindex="-1"]:focus { outline: none; }
 .cs-cont.cs-v-100-80  { padding-bottom: 80px; }
 
 /* Section header */
+/* Section label (level 1, above the h2): uppercase, bold, with a short accent line.
+   Sub-section labels (.garmin-eyebrow) step down: sentence case, grey, no line, so the two
+   levels differ in case, weight and marker as well as colour (WCAG 1.4.1). */
 .sec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-body);
-  font-size: var(--fs-label);
-  font-weight: 600;
+  font-size: var(--fs-caption);
+  font-weight: 700;
   line-height: var(--lh-label);
   letter-spacing: var(--ls-label);
-  color: #1755F4;
+  color: #1755F4;                 /* 5.43:1 on cream, 5.77:1 on white */
 
   text-transform: uppercase;
+}
+.sec-tag::before {
+  content: '';
+  flex-shrink: 0;
+  width: 24px;
+  height: 2px;
+  background: currentColor;       /* decorative; follows the label colour on dark sections too */
 }
 
 .sec-title {
