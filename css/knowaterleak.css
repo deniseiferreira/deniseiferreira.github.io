@@ -49,3 +49,7 @@
     );
   }
 }
+
+/* Outcomes title: no 720px cap, so "Fewer unnecessary inspections." stays on one line
+   wherever the content column allows (it still wraps on phones) */
+.narrow > .kw-title-wide { max-width: none; }
