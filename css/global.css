@@ -516,9 +516,8 @@ main[tabindex="-1"]:focus { outline: none; }
 .cs-cont.cs-v-100-80  { padding-bottom: 80px; }
 
 /* Section header */
-/* Section label (level 1, above the h2): uppercase, bold, with a short accent line.
-   Sub-section labels (.garmin-eyebrow) step down: sentence case, grey, no line, so the two
-   levels differ in case, weight and marker as well as colour (WCAG 1.4.1). */
+/* Section label (level 1, above the h2): bold, 13px, with a short accent line, which sets it
+   apart from the plain 12px sub-section labels (.garmin-eyebrow) by more than colour (WCAG 1.4.1). */
 .sec-tag {
   display: inline-flex;
   align-items: center;

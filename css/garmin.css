@@ -213,14 +213,15 @@
   gap: 20px;
 }
 
-/* Sub-section label (level 2, above the h3): one step below .sec-tag */
 .garmin-eyebrow {
   font-family: var(--font-body);
   font-size: var(--fs-label);
   font-weight: 600;
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-tag);
-  color: #5F5D5B;                 /* 6.17:1 on cream, 6.6:1 on white */
+  letter-spacing: var(--ls-label);
+  color: #1755F4;
+
+  text-transform: uppercase;
 }
 
 /* Screen titles — 24px for home/sleep/act; 36px for section intro only */
