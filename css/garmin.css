@@ -550,6 +550,7 @@
 img.garmin-ni-em { width: 20px; height: 20px; display: block; flex-shrink: 0; font-size: unset; }
 
 .garmin-ni-body {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -569,7 +570,6 @@ img.garmin-ni-em { width: 20px; height: 20px; display: block; flex-shrink: 0; fo
   font-size: var(--fs-body-sm);
   font-weight: 400;
   line-height: var(--lh-body-sm);
-  max-width: var(--measure);
   color: #6B6968;
 }
 
