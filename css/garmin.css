@@ -610,14 +610,6 @@ img.garmin-ni-em { width: 20px; height: 20px; display: block; flex-shrink: 0; fo
   color: #6B6968;
 }
 
-/* Blue accent divider between insights and strategy */
-.garmin-blue-div {
-  width: 48px;
-  height: 3px;
-  background: #1755F4;
-  flex-shrink: 0;
-}
-
 /* Padding variant: 100px top, 80px bottom (redesign intro section) */
 .cs-cont.cs-v-100-80 { padding-bottom: 80px; }
 
