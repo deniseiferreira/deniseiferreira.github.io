@@ -1035,19 +1035,6 @@
   gap: 40px;
 }
 
-.contact-tag {
-  font-family: var(--font-body);
-  font-size: var(--fs-label);
-  font-weight: 600;
-  line-height: var(--lh-label);
-  letter-spacing: var(--ls-label);
-  color: #D92112;
-
-  text-transform: uppercase;
-  align-self: flex-start;
-  text-align: left;
-}
-
 .contact-headline {
   display: flex;
   flex-direction: column;
